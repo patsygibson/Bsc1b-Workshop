@@ -5,11 +5,11 @@
 using namespace std;
 
 Item::Item()
-
 {
 	this->name = "Unamed Item";
 	this->description = "An indescribable item.";
 }
+
 Item::Item(string nName, string nDesc)
 {
 	this->name = nName;

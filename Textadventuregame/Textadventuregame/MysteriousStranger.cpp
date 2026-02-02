@@ -6,9 +6,7 @@ using namespace std;
 
 MysteriousStranger::MysteriousStranger() : Character()
 {
-	this->name = "Mysterious Stranger";
-	this->description = "A strange figure enveloped in nocturnal shadows. All you know is that they know everything about you.";
-	this->health = 150;
+	this->health = 100;
 }
 
 int MysteriousStranger::getHealth()
@@ -25,4 +23,5 @@ string MysteriousStranger::getDescription()
 {
 	return this->getDescription();
 }
+
 

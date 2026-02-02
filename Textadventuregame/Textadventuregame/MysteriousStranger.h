@@ -8,11 +8,11 @@ using namespace std;
 
 class MysteriousStranger : public Character
 {
-    private:
+private:
 
 	int health;
 
-   public:
+public:
 	MysteriousStranger();
 	virtual int getHealth();
 	string getDescription();
@@ -21,6 +21,6 @@ class MysteriousStranger : public Character
 	//The attack roll for human player involves the user guessing a number between 1 and 3 for success.
 	//int randomAttackRoll();
 	//void outputStatus();
-
+};
 
 

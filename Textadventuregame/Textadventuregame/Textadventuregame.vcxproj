@@ -123,13 +123,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Character.cpp" />
+    <ClCompile Include="Item.cpp" />
     <ClCompile Include="Location.cpp" />
     <ClCompile Include="Monster.cpp" />
+    <ClCompile Include="MysteriousStranger.cpp" />
     <ClCompile Include="Textadventuregame.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Character.h" />
+    <ClInclude Include="Item.h" />
     <ClInclude Include="Location.h" />
     <ClInclude Include="Monster.h" />
+    <ClInclude Include="MysteriousStranger.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

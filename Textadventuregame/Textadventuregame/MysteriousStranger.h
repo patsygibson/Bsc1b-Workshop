@@ -23,5 +23,4 @@ class MysteriousStranger : public Character
 	//void outputStatus();
 
 
-};
 

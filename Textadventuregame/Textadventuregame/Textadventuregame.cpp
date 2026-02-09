@@ -42,7 +42,7 @@ void gameinstruct() {
 int main()
 {
     Location Room("Your Room", "A small room lit by your office lamp next to your computer on your desk");
-    Location Cell("Prison Cell", "A dark wet room you have to share with Epstein and P Diddy");
+    Location Cell("Prison Cell", "A dark wet room you have to share.");
     string userinput;
 
     cout << "... You are sitting in front of your computer. Suddenly, the computer turns on by itself..." << endl;
@@ -95,9 +95,9 @@ int main()
         system("cls");
         cout << "'Czech Republic,in the Benedictine monastery of Podlazice to be exact. Can you guess the year?'" << endl;
         cout << "Enter your guess: ";
-        string yearGuess;
+        int yearGuess;
         cin >> yearGuess;
-        if (yearGuess == "1204" || yearGuess == "1230" || yearGuess == "13th century") {
+        if (yearGuess >= 1204 && yearGuess <= 1230) {
             system("cls");
             cout << "He claps his hands slowly and says, 'Impressive, so you remember who you are after all..." << endl;
         }
@@ -106,6 +106,9 @@ int main()
             system("cls");
             cout << "'Wrong. You are in the year of 1230 in Bohemia. You will soon find out why you are here...' He laughs menacingly." << endl;
         }
+
+        cout << "You look around the cell and feel a sudden urge to get out of this cell. You look at the bars and you see that they are old but sturdy." << endl;
+        //cout << "Would";
 
         
     }

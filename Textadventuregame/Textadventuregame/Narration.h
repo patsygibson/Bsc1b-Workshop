@@ -3,6 +3,9 @@
 #include <string>
 #include <vector>
 
+#include "Character.h"
+#include "Game.h"
+
 using namespace std;
 
 class Narration

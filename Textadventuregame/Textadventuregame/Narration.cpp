@@ -2,49 +2,47 @@
 
 Narration::Narration()
 {
-	this->Question = " ";
-	this->PossibleAnswer = vector<string>();
-	this->CorrectAnswer = " ";
-	this->Failure = 0;
-	this->CheckAnswer = false;
+	this->question = " ";
+	this->possibleAnswers = {};
+	this->correctAnswer = " ";
+	this->returnIndex = 0;
 }
 
-Narration::Narration(string nQuestion, vector<string> nPossibleAnswer, string nCorrectAnswer, int nFailure)
+Narration::Narration(string nQuestion, vector<string> nPossibleAnswer, string nCorrectAnswer, int nReturnIndex)
 {
-	this->Question = nQuestion;
-	this->PossibleAnswer = nPossibleAnswer;
-	this->CorrectAnswer = nCorrectAnswer;
-	this->Failure = nFailure;
-	this->CheckAnswer = nCheckAnswer;
+	this->question = nQuestion;
+	this->possibleAnswers = nPossibleAnswer;
+	this->correctAnswer = nCorrectAnswer;
+	this->returnIndex = nReturnIndex;
 }
 string Narration::getQuestion()
 {
-	return this->Question;
+	return this->question;
 }
 
-vector<string> Narration::getPossibleAnswer()
+vector<string> Narration::getPossibleAnswers()
 {
-	return this->PossibleAnswer;
+	return this->possibleAnswers;
 }
 string Narration::getCorrectAnswer()
 {
-	return this->CorrectAnswer;
+	return this->correctAnswer;
 }
-int Narration::getFailure()
+int Narration::getReturnIndex()
 {
-	return this->Failure;
+	return this->returnIndex;
 }
-bool Narration::CheckAnswer(string input)
+bool Narration::checkAnswer()
 {
 	string answer; cout << "your answer: "; 
 	cin >> answer;
-	if (answer == this->CorrectAnswer)
+	if (answer == this->correctAnswer)
 	{
-		this->CheckAnswer = true;
+		return true;
 	}
 	else
 	{
-		this->CheckAnswer = false;
+		return false;
 
-	} return this->CheckAnswer;
+	}
 }

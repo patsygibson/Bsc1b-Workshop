@@ -4,27 +4,26 @@
 #include <vector>
 
 #include "Character.h"
-#include "Game.h"
 
 using namespace std;
 
 class Narration
 {
 private:
-	string Question;
-	vector<string> PossibleAnswer;
-	string CorrectAnswer;
-	int Failure;
-	bool CheckAnswer;
+	string question;
+	vector<string> possibleAnswers;
+	string correctAnswer;
+	int returnIndex;
+
 public:
 	Narration();
-	Narration(string nQuestion, vector<string> nPossibleAnswer, string nCorrectAnswer, int nFailure, bool nCheckAnswer);
+	Narration(string nQuestion, vector<string> nPossibleAnswer, string nCorrectAnswer, int nReturnIndex);
 	string getQuestion();
-	vector<string> getPossibleAnswer();
+	vector<string> getPossibleAnswers();
 	string getCorrectAnswer();
-	int getFailure();
+	int getReturnIndex();
 
-	bool CheckAnswer(string input);
+	bool checkAnswer();
 
 };
 

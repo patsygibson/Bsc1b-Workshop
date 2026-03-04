@@ -1,12 +1,15 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "\\\\NUA-STOR06.nua.ac.uk\\Home 2025\\2501023\\GitHub\\Bsc1b-Workshop\\Textadventuregame\\",
+  "WorkspaceRootPath": "\\\\NUA-STOR06.nua.ac.uk\\Home 2025\\2501023\\Documents\\GitHub\\Bsc1b-Workshop\\Textadventuregame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|\\\\NUA-STOR06.nua.ac.uk\\Home 2025\\2501023\\GitHub\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Narration.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|\\\\NUA-STOR06.nua.ac.uk\\Home 2025\\2501023\\Documents\\GitHub\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Textadventuregame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|\\\\NUA-STOR06.nua.ac.uk\\Home 2025\\2501023\\GitHub\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Narration.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|\\\\NUA-STOR06.nua.ac.uk\\Home 2025\\2501023\\Documents\\GitHub\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\NarrPoint.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|\\\\NUA-STOR06.nua.ac.uk\\Home 2025\\2501023\\Documents\\GitHub\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\NarrPoint.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,27 +24,65 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Narration.cpp",
-              "DocumentMoniker": "\\\\NUA-STOR06.nua.ac.uk\\Home 2025\\2501023\\GitHub\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Narration.cpp",
-              "RelativeDocumentMoniker": "Textadventuregame\\Narration.cpp",
-              "ToolTip": "\\\\NUA-STOR06.nua.ac.uk\\Home 2025\\2501023\\GitHub\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Narration.cpp",
-              "RelativeToolTip": "Textadventuregame\\Narration.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
+              "Title": "Textadventuregame.cpp",
+              "DocumentMoniker": "\\\\NUA-STOR06.nua.ac.uk\\Home 2025\\2501023\\Documents\\GitHub\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Textadventuregame.cpp",
+              "RelativeDocumentMoniker": "Textadventuregame\\Textadventuregame.cpp",
+              "ToolTip": "\\\\NUA-STOR06.nua.ac.uk\\Home 2025\\2501023\\Documents\\GitHub\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Textadventuregame.cpp",
+              "RelativeToolTip": "Textadventuregame\\Textadventuregame.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-02-12T15:38:05.751Z",
+              "WhenOpened": "2026-03-04T20:44:37.469Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NarrPoint.cpp",
+              "DocumentMoniker": "\\\\NUA-STOR06.nua.ac.uk\\Home 2025\\2501023\\Documents\\GitHub\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\NarrPoint.cpp",
+              "RelativeDocumentMoniker": "Textadventuregame\\NarrPoint.cpp",
+              "ToolTip": "\\\\NUA-STOR06.nua.ac.uk\\Home 2025\\2501023\\Documents\\GitHub\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\NarrPoint.cpp",
+              "RelativeToolTip": "Textadventuregame\\NarrPoint.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-03-04T20:34:17.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "5ad98ed1-74d1-4ea1-b1b7-ac55bd12e3aa",
+        "Display": 0,
+        "X": 354,
+        "Y": 159,
+        "Width": 2218,
+        "Height": 1144,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Narration.h",
-              "DocumentMoniker": "\\\\NUA-STOR06.nua.ac.uk\\Home 2025\\2501023\\GitHub\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Narration.h",
-              "RelativeDocumentMoniker": "Textadventuregame\\Narration.h",
-              "ToolTip": "\\\\NUA-STOR06.nua.ac.uk\\Home 2025\\2501023\\GitHub\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Narration.h",
-              "RelativeToolTip": "Textadventuregame\\Narration.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
+              "Title": "NarrPoint.h",
+              "DocumentMoniker": "\\\\NUA-STOR06.nua.ac.uk\\Home 2025\\2501023\\Documents\\GitHub\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\NarrPoint.h",
+              "RelativeDocumentMoniker": "Textadventuregame\\NarrPoint.h",
+              "ToolTip": "\\\\NUA-STOR06.nua.ac.uk\\Home 2025\\2501023\\Documents\\GitHub\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\NarrPoint.h",
+              "RelativeToolTip": "Textadventuregame\\NarrPoint.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-02-12T15:51:22.156Z",
+              "WhenOpened": "2026-03-04T20:29:21.858Z",
               "EditorCaption": ""
             }
           ]

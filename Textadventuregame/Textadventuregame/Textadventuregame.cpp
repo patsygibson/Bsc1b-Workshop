@@ -41,11 +41,6 @@ void gameinstruct() {
 
 int main()
 {
-    NarrPoint first = NarrPoint("This is your office.", "Here is the first question.");
-    first.addChoice("My name is John.");
-    first.addChoice("My name is Jane.");
+//run intro scene
 
-    NarrPoint second = NarrPoint("This is your home.", "Here is the second question.");
-    second.addChoice("I am a student.");
-    second.addChoice("I am a teacher.");
 }

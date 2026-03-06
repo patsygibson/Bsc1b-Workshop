@@ -1,18 +1,15 @@
 #pragma once
+
 #include "Location.h"
 
-class IntroScene
+class IntroScene : public Location
 {
 private:
 	string name;
-	string userInput;
-	string playerName;
+
 public:
-	IntroScene();
-	IntroScene(string iName, string iuserInput, string iplayerName);
+	IntroScene(string iName);
 
 	string getName();
-	string getUserInput();
-	string getplayerName();
 };
 

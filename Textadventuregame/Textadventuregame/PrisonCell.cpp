@@ -1,16 +1,14 @@
 #include "PrisonCell.h"
 #include "NarrPoint.h"
 
-PrisonCell::PrisonCell()
-{
-    this->name = "Empty name";
-    this->description = "Empty description";
-}
-
-PrisonCell::PrisonCell(string iName, string iDesc)
+PrisonCell::PrisonCell(string iName) : Location()
 {
     this->name = iName;
-    this->description = iDesc;
+}
+
+void PrisonCell::setName(string nName)
+{
+    this->name = nName;
 }
 
 string PrisonCell::getName()
@@ -18,11 +16,10 @@ string PrisonCell::getName()
     return this->name;
 }
 
-string PrisonCell::getDescription()
-{
-    return this->description;
-}
 
+
+
+//Recommended to me to move this code from the main .cpp to here.
 int main()
 {
     NarrPoint first = NarrPoint("You wake up in a cold damp room. ", " You hear distant screams and the clanging of metal. You look around and you realise you are in a old prison cell. Suddenly you hear a voice echo from the shadows... 'Ah there you are...' the stranger says 'so you were brave enough to enter your name after all'. Your eyes try to adjust to the dimness of the cell and you try to make this figure. You don't recognise them but their voice sounds familiar somehow. They speak again 'I am guessing you would like to know where you are.' ");
@@ -42,54 +39,50 @@ int main()
     fourth.addChoice("No");
 
     if (fourth.getChoices()[0] == "Yes") {
-        cout << "I can tell you but first you must work with me' Will you cooperate ? " << endl;
-
+        cout << "I can tell you but first you must work with me... '" << endl;
 
     }
     else if (fourth.getChoices()[1] == "No") {
-        NarrPoint fifth = NarrPoint("You don't cooperate with them"  "'Fine have it your way', you start to feel dizzy and nauseous all of a sudden, 'Now I will ask you again, do you want to know why we are here?' ");
-        fifth.addChoice("Yes");
-        fifth.addChoice("No");
-        if (fifth.getChoices()[0] == "Yes") {
+        string userInput;
+        cout << "'Fine have it your way', you start to feel dizzy and nauseous all of a sudden, 'Now I will ask you again, do you want to know why we are here?' " << endl;
+        cin >> userInput;
+        if (userInput == "Yes") {
             cout << "I can tell you but first you must work with me' Will you cooperate ? " << endl;
-            //Just repeated code , How can I make it so it jumps back to the question instead of repeating the code?
         }
-        else if (fifth.getChoices()[1] == "No") {
+        else if (userInput == "No") {
             cout << "'Very well, it seems you would prefer to rot in this cell and to become rats food, suit yourself' The stranger walks away and you feel a sharp pain your chest, it's getting harder to breathe and everything starts to fade to black..." << endl;
-            //You go back to the start of the scene Prison Cell. 
+            //You go back to the start of the scene Prison Cell. " break;
         }
-
-
-
 
 
     }
-    NarrPoint sixth = Narrpoint("You have a choice to make." "Will you choose to cooperate with the stranger or not? ");
+  NarrPoint fifth = NarrPoint("You have a choice to make.", "Will you choose to cooperate with the stranger or not? ");
+  fifth.addChoice("Yes");
+  fifth.addChoice("No");
+
+    if (fifth.getChoices()[0] == "Yes") {
+        cout << "'Fantastic.' He chuckles 'Here, take this key' You have gained a key, you can now open the cell door. " << endl;
+
+    }
+    else if (fifth.getChoices()[1] == "No") {
+        cout << "'Very well, it seems you would prefer to rot in this cell and to become rats food, suit yourself' The stranger walks away and you feel a sharp pain your chest, it's getting harder to breathe and everything starts to fade to black..." << endl;
+        vector<Narrpoint> story = { fourth };
+        //Go back to last question
+    }
+
+    NarrPoint sixth = NarrPoint("You can now escape the cell", "Will you choose to escape or not? ");
     sixth.addChoice("Yes");
     sixth.addChoice("No");
 
     if (sixth.getChoices()[0] == "Yes") {
-        cout << "'Fantastic.' He chuckles 'Here, take this key' You have gained a key, you can now open the cell door. " << endl;
-
-    }
-    else if (sixth.getChoices()[1] == "No") {
-        cout << "'Very well, it seems you would prefer to rot in this cell and to become rats food, suit yourself' The stranger walks away and you feel a sharp pain your chest, it's getting harder to breathe and everything starts to fade to black..." << endl;
-        //You go back to the start of the scene Prison Cell. 
-    }
-
-    NarrPoint seventh = Narrpoint("You can now escape the cell" "Will you choose to escape or not? ");
-    seventh.addChoice("Yes");
-    seventh.addChoice("No");
-
-    if (seventh.getChoices()[0] == "Yes") {
         cout << "You open the cell door and you leave the cell, free to explore the rest of the monastery and to find out why you are here." << endl;
         //Move on to the next scene which is the Courtyard.
     }
-    else if (seventh.getChoices()[1] == "No") {
+    else if (sixth.getChoices()[1] == "No") {
         cout << "You decide to wait in the cell, the stranger speaks up 'Well what are you waiting for?' Open the cell!'" << endl;
         //You go back to the previous question 'will you choose to escape or not?'
 
 
-    vector<NarrPoint> story = { first, second, third };
+    vector<NarrPoint> story = { first, second, third, fourth, fifth, sixth };
 
-}
+} //Maybe the if statements above should be changed, need help with this. 

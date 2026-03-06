@@ -4,18 +4,9 @@
 
 using namespace std;
 
-IntroScene::IntroScene()
-{
-	this->name = "Empty name";
-	this->userInput = "Empty userInput";
-	this->playerName = "Empty playerName";
-}
-
-IntroScene::IntroScene(string iName, string iuserInput, string iplayerName)
+IntroScene::IntroScene(string iName) : Location()
 {
 	this->name = iName;
-	this->userInput = iuserInput;
-	this->playerName = iplayerName;
 }
 
 string IntroScene::getName()
@@ -23,15 +14,6 @@ string IntroScene::getName()
 	return this->name;
 }
 
-string IntroScene::getUserInput()
-{
-	return this->userInput;
-}
-
-string IntroScene::getplayerName()
-{
-	return this->playerName;
-}
 
 int main()
 {
@@ -41,7 +23,13 @@ int main()
 	cout << "You are sitting in your office staring at the blank screen of your computer. All of a sudden, your computer starts to glitch and a message appears on the screen: 'Please enter your name to continue: ' " << endl;
 	cin >> userInput;
 	system("cls");
-	userInput == playerName;
+
+	string playerName;
+	playerName = userInput;
+
+	cout << "Well done, " << playerName << " !" << endl;
+ //Trying to assign the user input to the player name variable.
+
 
 
 	//Next scene will be the prison cell.

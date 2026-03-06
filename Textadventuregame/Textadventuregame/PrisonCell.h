@@ -2,20 +2,19 @@
 #include <iostream>
 #include <vector>
 
+#include "Location.h"
+
 using namespace std;
 
-class PrisonCell
+class PrisonCell : public Location
 {
 private:
 	string name;
-	string description;
-
+	
 public:
-	PrisonCell();
-	PrisonCell(string iName, string iDesc);
-
+	PrisonCell(string iName);
+	void setName(string nName);
 	string getName();
-	string getDescription();
-
+	
 };
 

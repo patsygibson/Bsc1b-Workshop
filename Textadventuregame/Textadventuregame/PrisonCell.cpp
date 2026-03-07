@@ -51,6 +51,7 @@ int main()
         }
         else if (userInput == "No") {
             cout << "'Very well, it seems you would prefer to rot in this cell and to become rats food, suit yourself' The stranger walks away and you feel a sharp pain your chest, it's getting harder to breathe and everything starts to fade to black..." << endl;
+            vector<NarrPoint> story = { first };
             //You go back to the start of the scene Prison Cell. " break;
         }
 
@@ -66,7 +67,7 @@ int main()
     }
     else if (fifth.getChoices()[1] == "No") {
         cout << "'Very well, it seems you would prefer to rot in this cell and to become rats food, suit yourself' The stranger walks away and you feel a sharp pain your chest, it's getting harder to breathe and everything starts to fade to black..." << endl;
-        vector<Narrpoint> story = { fourth };
+        vector<NarrPoint> story = { fourth };
         //Go back to last question
     }
 
@@ -80,9 +81,28 @@ int main()
     }
     else if (sixth.getChoices()[1] == "No") {
         cout << "You decide to wait in the cell, the stranger speaks up 'Well what are you waiting for?' Open the cell!'" << endl;
+        vector<NarrPoint> story = { sixth };
         //You go back to the previous question 'will you choose to escape or not?'
+    }
 
 
-    vector<NarrPoint> story = { first, second, third, fourth, fifth, sixth };
+  vector<NarrPoint> story = { first, second, third, fourth, fifth, sixth };
+  int plotIndex = 0;
+  int userInp;
 
-} //Maybe the if statements above should be changed, need help with this. 
+  while (plotIndex >= 0 && plotIndex < story.size()) {
+      cout << story[plotIndex].getPlot() << endl;
+      cout << story[plotIndex].getQuestion() << endl;
+
+      for (int i = 0; i < story[plotIndex].getChoices().size(); i++) {
+          cout << "[" << i << "]" << story[plotIndex].getChoices()[i] << endl;
+      }
+      cin >> userInp;
+      system("cls");
+      cout << "You chose: " << story[plotIndex].getChoices()[userInp] << endl;
+
+      plotIndex += 1;
+      cout << "=================================================== " << endl;
+  }
+    }
+    //Maybe the if statements above should be changed, need help with this. 

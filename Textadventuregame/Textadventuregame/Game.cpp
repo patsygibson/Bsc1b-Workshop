@@ -9,6 +9,7 @@ Game::Game()
 
 	//currentScene = 0;
 
+
     cout << "... You are sitting in front of your computer. Suddenly, the computer turns on by itself..." << endl;
     cout << "Press Enter to continue..." << endl;
     cin >> userinput;

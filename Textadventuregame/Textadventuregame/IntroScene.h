@@ -5,7 +5,7 @@
 class IntroScene : public Location
 {
 private:
-	string name;
+	//string name;
 
 public:
 	IntroScene(string iName);

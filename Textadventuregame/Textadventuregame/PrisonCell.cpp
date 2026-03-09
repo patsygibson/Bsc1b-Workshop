@@ -4,24 +4,8 @@
 PrisonCell::PrisonCell(string iName) : Location()
 {
     this->name = iName;
-}
-
-void PrisonCell::setName(string nName)
-{
-    this->name = nName;
-}
-
-string PrisonCell::getName()
-{
-    return this->name;
-}
 
 
-
-
-//Recommended to me to move this code from the main .cpp to here.
-int main()
-{
     NarrPoint first = NarrPoint("You wake up in a cold damp room. ", " You hear distant screams and the clanging of metal. You look around and you realise you are in a old prison cell. Suddenly you hear a voice echo from the shadows... 'Ah there you are...' the stranger says 'so you were brave enough to enter your name after all'. Your eyes try to adjust to the dimness of the cell and you try to make this figure. You don't recognise them but their voice sounds familiar somehow. They speak again 'I am guessing you would like to know where you are.' ");
     first.addChoice("Yes");
     first.addChoice("I don't know");
@@ -38,6 +22,62 @@ int main()
     fourth.addChoice("Yes");
     fourth.addChoice("No");
 
+    NarrPoint fifth = NarrPoint("You have a choice to make.", "Will you choose to cooperate with the stranger or not? ");
+    fifth.addChoice("Yes");
+    fifth.addChoice("No");
+
+    NarrPoint sixth = NarrPoint("You can now escape the cell", "Will you choose to escape or not? ");
+    sixth.addChoice("Yes");
+    sixth.addChoice("No");
+
+	this->story.push_back(first);
+	this->story.push_back(second);
+	this->story.push_back(third);
+	this->story.push_back(fourth);
+	this->story.push_back(fifth);
+	this->story.push_back(sixth);
+}
+
+void PrisonCell::setName(string nName)
+{
+    this->name = nName;
+}
+
+string PrisonCell::getName()
+{
+    return this->name;
+}
+
+
+
+
+void PrisonCell::runScenario()
+{
+    int plotIndex = 0;
+    int userInp;
+
+    while (plotIndex >= 0 && plotIndex < this->story.size()) {
+        cout << story[plotIndex].getPlot() << endl;
+        cout << story[plotIndex].getQuestion() << endl;
+
+        for (int i = 0; i < story[plotIndex].getChoices().size(); i++) {
+            cout << "[" << i << "]" << story[plotIndex].getChoices()[i] << endl;
+        }
+        cin >> userInp;
+        system("cls");
+        cout << "You chose: " << story[plotIndex].getChoices()[userInp] << endl;
+
+        plotIndex += 1;
+        cout << "=================================================== " << endl;
+    }
+}
+
+
+
+
+//Recommended to me to move this code from the main .cpp to here.
+    
+    /*
     if (fourth.getChoices()[0] == "Yes") {
         cout << "I can tell you but first you must work with me... '" << endl;
 
@@ -57,9 +97,12 @@ int main()
 
 
     }
-  NarrPoint fifth = NarrPoint("You have a choice to make.", "Will you choose to cooperate with the stranger or not? ");
-  fifth.addChoice("Yes");
-  fifth.addChoice("No");
+
+
+
+
+
+
 
     if (fifth.getChoices()[0] == "Yes") {
         cout << "'Fantastic.' He chuckles 'Here, take this key' You have gained a key, you can now open the cell door. " << endl;
@@ -71,9 +114,7 @@ int main()
         //Go back to last question
     }
 
-    NarrPoint sixth = NarrPoint("You can now escape the cell", "Will you choose to escape or not? ");
-    sixth.addChoice("Yes");
-    sixth.addChoice("No");
+
 
     if (sixth.getChoices()[0] == "Yes") {
         cout << "You open the cell door and you leave the cell, free to explore the rest of the monastery and to find out why you are here." << endl;
@@ -84,25 +125,13 @@ int main()
         vector<NarrPoint> story = { sixth };
         //You go back to the previous question 'will you choose to escape or not?'
     }
+    
 
 
-  vector<NarrPoint> story = { first, second, third, fourth, fifth, sixth };
-  int plotIndex = 0;
-  int userInp;
+    struct Key {
+        string name;
+        string description;
 
-  while (plotIndex >= 0 && plotIndex < story.size()) {
-      cout << story[plotIndex].getPlot() << endl;
-      cout << story[plotIndex].getQuestion() << endl;
-
-      for (int i = 0; i < story[plotIndex].getChoices().size(); i++) {
-          cout << "[" << i << "]" << story[plotIndex].getChoices()[i] << endl;
-      }
-      cin >> userInp;
-      system("cls");
-      cout << "You chose: " << story[plotIndex].getChoices()[userInp] << endl;
-
-      plotIndex += 1;
-      cout << "=================================================== " << endl;
-  }
-    }
+    };
+*/
     //Maybe the if statements above should be changed, need help with this. 

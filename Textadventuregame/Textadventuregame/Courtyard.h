@@ -1,21 +1,15 @@
 #pragma once
-#include <iostream>
-#include <vector>
-
 #include "Location.h"
 
 using namespace std;
 
-class PrisonCell : public Location
+class Courtyard : public Location
 {
 private:
 	//string name;
-	
 public:
-	PrisonCell(string iName);
+	Courtyard(string iName);
 	void setName(string nName);
 	string getName();
-	
-	void runScenario() override;
 };
 

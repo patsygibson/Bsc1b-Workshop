@@ -4,6 +4,17 @@
 
 using namespace std;
 
+/*
+struct Choice
+{
+	string text;
+
+
+	int healthEffect;
+	int skillEffect;
+};
+*/
+
 class NarrPoint
 {
 private:

@@ -1,6 +1,8 @@
 #pragma once
 #include <iostream>
+#include <vector>
 #include <string>
+#include "NarrPoint.h"
 
 
 using namespace std;
@@ -8,9 +10,10 @@ using namespace std;
 
 class Location
 {
-private:
+protected:
 	string name;
 	string description;
+	vector<NarrPoint> story;
 
 public:
 	Location();
@@ -19,5 +22,7 @@ public:
 
 	string getName();
 	string getDescription();
+
+	virtual void runScenario();
 
 };

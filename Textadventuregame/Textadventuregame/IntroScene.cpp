@@ -14,9 +14,8 @@ string IntroScene::getName()
 	return this->name;
 }
 
-
-int main()
-{
+/*
+int main() {
 	string name = "IntroScene";
 	string userInput = "Empty userinput";
 
@@ -28,10 +27,10 @@ int main()
 	playerName = userInput;
 
 	cout << "Well done, " << playerName << " !" << endl;
+}
  //Trying to assign the user input to the player name variable.
 
-
+ */
 
 	//Next scene will be the prison cell.
 
-}

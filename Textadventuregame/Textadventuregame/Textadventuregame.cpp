@@ -2,8 +2,9 @@
 #include <vector>
 #include "NarrPoint.h"
 #include "Location.h"
-#include "IntroScene.h"
+//#include "IntroScene.h"
 #include "PrisonCell.h"
+//#include "Courtyard.h"
 
 using namespace std;
 
@@ -44,60 +45,29 @@ void gameinstruct() {
 
 int main()
 {
-<<<<<<< HEAD
-    Location Room("Your Room", "A small room lit by your office lamp next to your computer on your desk");
-    Location Cell("Prison Cell", "A dark wet room you have to share.");
-    Location Courtyard("Courtyard", "A cold and medieval place");
 
-    string userinput;
-    string playerName;
-
-
-
-    vector<Narration> gameStory = {};
-
-    Narration firstChoice = Narration(
-        "You wake up in a cold damp room. You hear distant screams and the clanging of metal. As you observe your surroundings, you realise you are in a prison cell. Suddenly a deep voice echoes from the other side of the cell bars... Czech Republic,in the Benedictine monastery of Podlazice to be exact. Can you guess the year?'",
-        { "1220", "500BCE" },
-        "1220",
-        0
-    );
-    gameStory.push_back(firstChoice);
-
-   
-
-    int currentNarrationIndex = 0;
-
-    while (true) {
-        cout << gameStory[currentNarrationIndex].getQuestion() << endl;
-        bool result = gameStory[currentNarrationIndex].checkAnswer();
-        if (result == true) {
-            currentNarrationIndex += 1;
-        }
-        else {
-            currentNarrationIndex = gameStory[currentNarrationIndex].getReturnIndex();
-        }
-
-
-
-
-
-    }
-
-=======
-//run intro scene
-    IntroScene Intro = IntroScene("Name");
-    PrisonCell Prison = PrisonCell("Name");
-    vector<Location> chapters = {Intro, Prison};
+    //IntroScene Intro = IntroScene("Name");
+    PrisonCell Prison = PrisonCell("Prison Cell");
+    //Courtyard Courtyd = Courtyard("Name");
+    vector<Location*> chapters = {&Prison}; //add Courtyard and final scene to this vector when they are done.
 
     int chapIndex = 0;
     
 
     while (chapIndex < chapters.size()) { 
-        cout << "You are currently in " << chapters[chapIndex].getName() << endl;
-    else()
+        cout << "You are currently in " << chapters[chapIndex]->getName() << endl;
+
+        chapters[chapIndex]->runScenario();
+
+
+        chapIndex += 1;
+        if (chapIndex == chapters.size()) { //for now it is 3 but it will be changed once the new locations are added.
+            cout << "Congratulations, you have completed the game!" << endl;
+            break;
+        }
+        
        
     }
->>>>>>> f75c78d1d8b40f1ad547e990ada9783418323d37
 
-}
+} //This is the main function of the game, it will run call each location and narrpoints in order. Possibly
+//queue<string> chapters = { "Introscene", "Prison Cell", "Courtyard", "Final Scene" };

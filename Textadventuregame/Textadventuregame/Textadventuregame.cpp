@@ -1,6 +1,9 @@
 #include <iostream>
 #include <vector>
 #include "NarrPoint.h"
+#include "Location.h"
+#include "IntroScene.h"
+#include "PrisonCell.h"
 
 using namespace std;
 
@@ -42,5 +45,17 @@ void gameinstruct() {
 int main()
 {
 //run intro scene
+    IntroScene Intro = IntroScene("Name");
+    PrisonCell Prison = PrisonCell("Name");
+    vector<Location> chapters = {Intro, Prison};
+
+    int chapIndex = 0;
+    
+
+    while (chapIndex < chapters.size()) { 
+        cout << "You are currently in " << chapters[chapIndex].getName() << endl;
+    else()
+       
+    }
 
 }

@@ -2,7 +2,7 @@
 #include <vector>
 #include "NarrPoint.h"
 #include "Location.h"
-//#include "IntroScene.h"
+#include "IntroScene.h"
 #include "PrisonCell.h"
 //#include "Courtyard.h"
 
@@ -47,9 +47,10 @@ int main()
 {
 
     //IntroScene Intro = IntroScene("Name");
+    IntroScene Intro = IntroScene("Intro Scene");
     PrisonCell Prison = PrisonCell("Prison Cell");
     //Courtyard Courtyd = Courtyard("Name");
-    vector<Location*> chapters = {&Prison}; //add Courtyard and final scene to this vector when they are done.
+    vector<Location*> chapters = {&Intro &Prison}; //add Courtyard and final scene to this vector when they are done.
 
     int chapIndex = 0;
     

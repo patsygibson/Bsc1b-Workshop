@@ -4,8 +4,6 @@
 
 #include "Location.h"
 
-using namespace std;
-
 class PrisonCell : public Location
 {
 private:

@@ -2,53 +2,56 @@
 #include "NarrPoint.h"
 
 
-IntroScene::IntroScene(string iName) : Location()
+IntroScene::IntroScene(std::string iName) : Location()
 {
-	
 	this->name = iName;
-	string name = "Intro";
-	string userInput = "Empty userinput";
+	std::string name = "Intro";
+	std::string userInput = "Empty userinput";
 
-	cout << "You are sitting in your office staring at the blank screen of your computer. All of a sudden, your computer starts to glitch and a message appears on the screen: 'Please enter your name to continue: ' " << endl;
-	cin >> userInput;
-	system("cls");
-
-	string playerName;
-	playerName = userInput;
-
-	cout << "Well done, " << playerName << " !" << endl;
 }
 
 
 
-void IntroScene::setName(string nName)
+void IntroScene::setName(std::string nName)
 {
 	this->name = nName;
 }
 
-string IntroScene::getName()
+std::string IntroScene::getName()
 {
 	return this->name;
 }
 
 void IntroScene::runScenario()
 {
+	std::string playerName;
+	std::string userInput;
+	std::string getline;
 	int plotIndex = 0;
 
+	std::cout << "You are sitting in your office staring at the blank screen of your computer. All of a sudden, your computer starts to glitch and a message appears on the screen: 'Please enter your name to continue: ' " << std::endl;
+	std::getline(std::cin, userInput);
+	//std::cin >> userInput;
+	system("cls");
+
+
+	std::cout << "Welcome, " << userInput << " !" << std::endl;
+
+
 	while (plotIndex >= 0 && plotIndex < this->story.size()) {
-		cout << story[plotIndex].getPlot() << endl;
-		cout << story[plotIndex].getQuestion() << endl;
+		std::cout << story[plotIndex].getPlot() << std::endl;
+		std::cout << story[plotIndex].getQuestion() << std::endl;
 
 		for (int i = 0; i < story[plotIndex].getChoices().size(); i++) {
-			cout << "[" << i << "]" << story[plotIndex].getChoices()[i] << endl;
+			std::cout << "[" << i << "]" << story[plotIndex].getChoices()[i].text << std::endl;
 		}
-		int userInp;
-		cin >> userInp;
+		int userInput;
+		std::cin >> userInput;
 		system("cls");
-		cout << "You chose: " << story[plotIndex].getChoices()[userInp] << endl;
+		std::cout << "You chose: " << story[plotIndex].getChoices()[userInput].text << std::endl;
 
 		plotIndex += 1;
-		cout << "=================================================== " << endl;
+		std::cout << "=================================================== " << std::endl;
 	}
 }
 

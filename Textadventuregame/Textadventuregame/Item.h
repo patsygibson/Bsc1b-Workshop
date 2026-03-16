@@ -2,19 +2,18 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
 
 class Item
 {
 private:
-	string name;
-	string description;
+	std::string name;
+	std::string description;
 
 public:
 	Item();
-	Item(string nName, string nDesc);
-	string getName();
-	string getDescription();
+	Item(std::string nName, std::string nDesc);
+	std::string getName();
+	std::string getDescription();
 };
 
 

@@ -5,23 +5,20 @@
 #include "NarrPoint.h"
 
 
-using namespace std;
-
-
 class Location
 {
 protected:
-	string name;
-	string description;
-	vector<NarrPoint> story;
+	std::string name;
+	std::string description;
+	std::vector<NarrPoint> story;
 
 public:
 	Location();
-	Location(string nName, string nDesc);
+	Location(std::string nName, std::string nDesc);
 
 
-	string getName();
-	string getDescription();
+	std::string getName();
+	std::string getDescription();
 
 	virtual void runScenario();
 

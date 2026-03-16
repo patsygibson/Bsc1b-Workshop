@@ -127,6 +127,7 @@
     <ClCompile Include="Courtyard.cpp" />
     <ClCompile Include="IntroScene.cpp" />
     <ClCompile Include="Item.cpp" />
+    <ClCompile Include="LargeCell.cpp" />
     <ClCompile Include="Location.cpp" />
     <ClCompile Include="MysteriousStranger.cpp" />
     <ClCompile Include="NarrPoint.cpp" />
@@ -138,6 +139,7 @@
     <ClInclude Include="Courtyard.h" />
     <ClInclude Include="IntroScene.h" />
     <ClInclude Include="Item.h" />
+    <ClInclude Include="LargeCell.h" />
     <ClInclude Include="Location.h" />
     <ClInclude Include="MysteriousStranger.h" />
     <ClInclude Include="NarrPoint.h" />

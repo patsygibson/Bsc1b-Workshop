@@ -7,7 +7,7 @@ Location::Location()
 	this->story = {};
 }
 
-Location::Location(string nName, string nDesc)
+Location::Location(std::string nName, std::string nDesc)
 {
 	this->name = nName;
 	this->description = nDesc;
@@ -15,17 +15,17 @@ Location::Location(string nName, string nDesc)
 }
 
 
-string Location::getName()
+std::string Location::getName()
 {
 	return this->name;
 }
 
-string Location::getDescription()
+std::string Location::getDescription()
 {
 	return this->description;
 }
 
 void Location::runScenario()
 {
-	cout << "This is a generic location, there is no scenario to run." << endl;
+	std::cout << "This is a generic location, there is no scenario to run." << std::endl;
 }

@@ -9,9 +9,9 @@ class IntroScene : public Location
 private:
 
 public:
-	IntroScene(string iName);
-	void setName(string nName);
-	string getName();
+	IntroScene(std::string iName);
+	void setName(std::string nName);
+	std::string getName();
 
 	void runScenario() override;
 };

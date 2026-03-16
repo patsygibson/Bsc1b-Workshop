@@ -4,16 +4,15 @@
 
 #include "Location.h"
 
-using namespace std;
 
 class Courtyard : public Location
 {
 private:
 	
 public:
-	Courtyard(string iName);
-	void setName(string nName);
-	string getName();
+	Courtyard(std::string iName);
+	void setName(std::string nName);
+	std::string getName();
 
 	void runScenario() override;
 };

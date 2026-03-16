@@ -1,25 +1,23 @@
 #include "Item.h"
 
-
-
 Item::Item()
 {
 	this->name = "Unamed Item";
 	this->description = "An indescribable item.";
 }
 
-Item::Item(string nName, string nDesc)
+Item::Item(std::string nName, std::string nDesc)
 {
 	this->name = nName;
 	this->description = nDesc;
 }
 
-string Item::getName()
+std::string Item::getName()
 {
 	return this->name;
 }
 
-string Item::getDescription()
+std::string Item::getDescription()
 {
 	return this->description;
 }

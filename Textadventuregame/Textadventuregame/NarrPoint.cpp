@@ -6,29 +6,29 @@ NarrPoint::NarrPoint()
 	this->question = "Empty question";
 	this->choice = {};
 }
-NarrPoint::NarrPoint(string iPlot, string iQuestion)
+NarrPoint::NarrPoint(std::string iPlot, std::string iQuestion)
 {
 	this->plot = iPlot;
 	this->question = iQuestion;
 	this->choice = {};
 }
 
-string NarrPoint::getPlot()
+std::string NarrPoint::getPlot()
 {
 	return this->plot;
 }
 
-string NarrPoint::getQuestion()
+std::string NarrPoint::getQuestion()
 {
 	return this->question;
 }
 
-void NarrPoint::addChoice(string iChoice)
+void NarrPoint::addChoice(Choice iChoice)
 {
 	this->choice.push_back(iChoice);
 }
 
-vector<string> NarrPoint::getChoices()
+std::vector<Choice> NarrPoint::getChoices()
 {
 	return this->choice;
 }

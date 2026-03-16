@@ -1,9 +1,10 @@
 #include "Courtyard.h"
 #include "NarrPoint.h"
 
-Courtyard::Courtyard(string iName) : Location()
+Courtyard::Courtyard(std::string iName) : Location()
 {
 	this->name = iName;                         
+    /*
    NarrPoint seventh = NarrPoint("You both walk outside into the courtyard...", "All of a sudden a guard is stood in front of you, 'Stab him!' the stranger orders you, 'Do it now...', Will you obey the stranger's orders?");
    seventh.addChoice("Yes");
    seventh.addChoice("No");
@@ -22,19 +23,16 @@ Courtyard::Courtyard(string iName) : Location()
 
    NarrPoint eleventh = NarrPoint("He leads you back through the monastery and you are confused as to why he is taking you back inside", "What do you say?");
    eleventh.addChoice("Where are we going?");
-   eleventh.addChoice("[Say nothing]");
+   eleventh.addChoice("[Say nothing]");*/
 
-   NarrPoint twelfth = NarrPoint("You enter another prison cell but this one has a very large book in it. Ludovic says 'If you touch this book, it will take you back to your home back in 2026'", "Will you enter the cell and touch the book?");
-   twelfth.addChoice("Yes");
-   twelfth.addChoice("No");
 }
 
-void Courtyard::setName(string nName)
+void Courtyard::setName(std::string nName)
 {
 	this->name = nName;
 }
 
-string Courtyard::getName()
+std::string Courtyard::getName()
 {
 	return this->name;
 }
@@ -46,17 +44,17 @@ void Courtyard::runScenario()
     int userInp;
 
     while (plotIndex >= 0 && plotIndex < this->story.size()) {
-        cout << story[plotIndex].getPlot() << endl;
-        cout << story[plotIndex].getQuestion() << endl;
+        std::cout << story[plotIndex].getPlot() << std::endl;
+        std::cout << story[plotIndex].getQuestion() << std::endl;
 
         for (int i = 0; i < story[plotIndex].getChoices().size(); i++) {
-            cout << "[" << i << "]" << story[plotIndex].getChoices()[i] << endl;
+            std::cout << "[" << i << "]" << story[plotIndex].getChoices()[i].text << std::endl;
         }
-        cin >> userInp;
+        std::cin >> userInp;
         system("cls");
-        cout << "You chose: " << story[plotIndex].getChoices()[userInp] << endl;
+        std::cout << "You chose: " << story[plotIndex].getChoices()[userInp].text << std::endl;
 
         plotIndex += 1;
-        cout << "=================================================== " << endl;
+        std::cout << "=================================================== " << std::endl;
     }
 }

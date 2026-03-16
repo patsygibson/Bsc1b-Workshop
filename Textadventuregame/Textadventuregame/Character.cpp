@@ -7,22 +7,22 @@ Character::Character()
 {
 	this->name = "Unnamed room";
 	this->description = "A dark room.";
-	this->inventory = vector<Item*>();
+	this->inventory = std::vector<Item*>();
 }
 
-Character::Character(string nName, string nDesc)
+Character::Character(std::string nName, std::string nDesc)
 {
 	this->name = nName;
 	this->description = nDesc;
 }
 
 
-string Character::getName()
+std::string Character::getName()
 {
 	return this->name;
 }
 
-string Character::getDescription()
+std::string Character::getDescription()
 {
 	return this->description;
 }
@@ -32,7 +32,7 @@ void Character::addItem(Item* item)
 	inventory.push_back(item);
 }
 
-Item* Character::getItem(string itemName)
+Item* Character::getItem(std::string itemName)
 {
 	for (Item* item : inventory)
 	{

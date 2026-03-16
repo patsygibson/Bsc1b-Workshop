@@ -2,35 +2,33 @@
 #include <iostream>
 #include <vector>
 
-using namespace std;
 
-/*
+
 struct Choice
 {
-	string text;
-
+	std::string text;
 
 	int healthEffect;
 	int skillEffect;
 };
-*/
+
 
 class NarrPoint
 {
 private:
-	string plot;
-	string question;
+	std::string plot;
+	std::string question;
 
-	vector<string> choice;
+	std::vector<Choice> choice;
 
 public:
 	NarrPoint();
-	NarrPoint(string iPlot, string iQuestion);
+	NarrPoint(std::string iPlot, std::string iQuestion);
 
-	string getPlot();
-	string getQuestion();
-	void addChoice(string iChoice);
+	std::string getPlot();
+	std::string getQuestion();
+	void addChoice(Choice iChoice);
 
-	vector<string> getChoices();
+	std::vector<Choice> getChoices();
 };
 

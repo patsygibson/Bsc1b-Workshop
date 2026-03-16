@@ -1,13 +1,20 @@
 #include "PrisonCell.h"
 #include "NarrPoint.h"
 
-PrisonCell::PrisonCell(string iName) : Location()
+PrisonCell::PrisonCell(std::string iName) : Location()
 {
     this->name = iName;
 
 
     NarrPoint first = NarrPoint("You wake up in a cold damp room. ", " You hear distant screams and the clanging of metal. You look around and you realise you are in a old prison cell. Suddenly you hear a voice echo from the shadows... 'Ah there you are...' the stranger says 'so you were brave enough to enter your name after all'. Your eyes try to adjust to the dimness of the cell and you try to make this figure. You don't recognise them but their voice sounds familiar somehow. They speak again 'I am guessing you would like to know where you are.' ");
-    first.addChoice("Yes");
+    Choice firstChoice = Choice{"Yes", 10, 1};
+    Choice secondChoice = Choice{ "No", -10, 0 };
+    first.addChoice(firstChoice);
+    first.addChoice(secondChoice);
+
+
+    /*
+
     first.addChoice("I don't know");
 
     NarrPoint second = NarrPoint("'You are in a Catholic Benedictine Monastery prison cell, located in Podlazice, Bohemia to be exact.' ", "Can you guess the year?");
@@ -28,26 +35,25 @@ PrisonCell::PrisonCell(string iName) : Location()
 
     NarrPoint sixth = NarrPoint("You can now escape the cell", "Will you choose to escape or not? ");
     sixth.addChoice("Yes");
-    sixth.addChoice("No");
+    sixth.addChoice("No");*/
 
 	this->story.push_back(first);
-	this->story.push_back(second);
-	this->story.push_back(third);
-	this->story.push_back(fourth);
-	this->story.push_back(fifth);
-	this->story.push_back(sixth);
+	//this->story.push_back(second);
+	//this->story.push_back(third);
+	//this->story.push_back(fourth);
+	//this->story.push_back(fifth);
+	//this->story.push_back(sixth);
 }
 
-void PrisonCell::setName(string nName)
+void PrisonCell::setName(std::string nName)
 {
     this->name = nName;
 }
 
-string PrisonCell::getName()
+std::string PrisonCell::getName()
 {
     return this->name;
 }
-
 
 
 
@@ -57,18 +63,22 @@ void PrisonCell::runScenario()
     int userInp;
 
     while (plotIndex >= 0 && plotIndex < this->story.size()) {
-        cout << story[plotIndex].getPlot() << endl;
-        cout << story[plotIndex].getQuestion() << endl;
+        std::cout << story[plotIndex].getPlot() << std::endl;
+        std::cout << story[plotIndex].getQuestion() << std::endl;
 
         for (int i = 0; i < story[plotIndex].getChoices().size(); i++) {
-            cout << "[" << i << "]" << story[plotIndex].getChoices()[i] << endl;
+            std::cout << "[" << i << "]" << story[plotIndex].getChoices()[i].text << " (" << story[plotIndex].getChoices()[i].healthEffect << ")" << std::endl;
         }
-        cin >> userInp;
+        std::cin >> userInp;
         system("cls");
-        cout << "You chose: " << story[plotIndex].getChoices()[userInp] << endl;
+        std::cout << "You chose: " << story[plotIndex].getChoices()[userInp].text << std::endl;
+
+        std::cout << "You gain " << story[plotIndex].getChoices()[userInp].healthEffect << " health" << std::endl;
+        std::cout << "You gain " << story[plotIndex].getChoices()[userInp].healthEffect << " health" << std::endl;
+
 
         plotIndex += 1;
-        cout << "=================================================== " << endl;
+        std::cout << "=================================================== " << std::endl;
     }
 }
 

@@ -4,25 +4,22 @@
 #include <vector>
 #include "Item.h"
 
-using namespace std;
 
 class Character
-
 {
 private:
-	string name;
-	string description;
-	vector<Item*> inventory;
+	std::string name;
+	std::string description;
+	std::vector<Item*> inventory;
 
 public:
 		Character();
-		Character(string nName, string nDesc);
+		Character(std::string nName, std::string nDesc);
 
-
-		string getName();
-		string getDescription();
+		std::string getName();
+		std::string getDescription();
 
 		void addItem(Item* item);
-		Item* getItem(string item);
+		Item* getItem(std::string item);
 	};
 

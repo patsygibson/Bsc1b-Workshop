@@ -30,5 +30,8 @@ public:
 	void addChoice(Choice iChoice);
 
 	std::vector<Choice> getChoices();
+
+	/*void addChoice(string iChoice);
+	std::vector<string> getChoices();*/
 };
 

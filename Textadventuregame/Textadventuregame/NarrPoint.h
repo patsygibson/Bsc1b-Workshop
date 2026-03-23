@@ -7,7 +7,7 @@
 struct Choice
 {
 	std::string text;
-
+	std::string outcome;
 	int healthEffect;
 	int skillEffect;
 };

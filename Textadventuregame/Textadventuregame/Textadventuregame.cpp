@@ -53,12 +53,21 @@ int main()
     LargeCell LCell = LargeCell("Large Cell");
     std::vector<Location*> chapters = { &Intro, &Prison, &Courtyd, &LCell }; //add Courtyard and final scene to this vector when they are done.
 
+    /*
+    std::vector<std::string> asciiArt = {};
+    asciiArt.push_back("adaenfeofn pfefaa8dfhaw9dhawd0awd");
+    asciiArt.push_back("adaenfeofn pfefaa8dfhaw9dhawd0awd");
+    asciiArt.push_back("adaenfeofn pfefaa8dfhaw9dhawd0awd");
+    asciiArt.push_back("adaenfeofn pfefaa8dfhaw9dhawd0awd");
+    */
+
     int chapIndex = 0;
     
 
     while (chapIndex < chapters.size()) { 
-        std::cout << "You are currently in " << chapters[chapIndex]->getName() << std::endl;
+        std::cout << "         " <<  chapters[chapIndex]->getName() << std::endl;
 
+        //cout << asciiArt[chapIndex] << endl;
         chapters[chapIndex]->runScenario();
 
 

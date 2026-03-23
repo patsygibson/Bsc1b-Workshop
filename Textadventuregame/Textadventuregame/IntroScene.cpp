@@ -35,7 +35,10 @@ void IntroScene::runScenario()
 	system("cls");
 
 
-	std::cout << "Welcome, " << userInput << " !" << std::endl;
+	std::cout << "  Welcome, " << userInput << " ! " << std::endl;
+	std::cout << "   Error 404 " << std::endl;
+	std::cout << "===========================================" << "  " << std::endl;
+	std::cout << "    The screen flashes, then briefly turns in a sea of blue pixels before quickly winking out... " << " ...Entering new timeline..." << std::endl;
 
 
 	while (plotIndex >= 0 && plotIndex < this->story.size()) {

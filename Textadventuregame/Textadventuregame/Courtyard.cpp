@@ -3,28 +3,36 @@
 
 Courtyard::Courtyard(std::string iName) : Location()
 {
-	this->name = iName;                         
-    /*
-   NarrPoint seventh = NarrPoint("You both walk outside into the courtyard...", "All of a sudden a guard is stood in front of you, 'Stab him!' the stranger orders you, 'Do it now...', Will you obey the stranger's orders?");
-   seventh.addChoice("Yes");
-   seventh.addChoice("No");
+	this->name = iName;       
 
-   NarrPoint eighth = NarrPoint("The guard is stabbed and he falls to the ground.", "The stranger looks at you and says 'My name is something you may not be able to pronounce but you can call me Ludovic.");
-   eighth.addChoice("Cool name");
-   eighth.addChoice("What's your real name?");
+    NarrPoint first = NarrPoint("You both walk outside into the courtyard...", "All of sudden a guard is stood in front of you! 'Stab him!' the stranger orders you, 'Do it now!', will you obey the stranger's orders?");
+    Choice firstChoice = Choice{ "Yes", "You succesfully stab the guard 'My, my, I'm impressed... Hermann' he smirks... But your name is not Hermanm...", 0, 1 };
+    Choice secondChoice = Choice{ "No", "'You idiot!' the stranger casts some sort of strange spell on the guard which makes him freeze and vanish into thin air. This shocks you as you begin to realise this stranger is not just an ordinary person... but something entirely different... not human. ", 1, 0 };
+    first.addChoice(firstChoice);
+    first.addChoice(secondChoice);
 
-   NarrPoint ninth = NarrPoint("Ludovic laughs and says 'You are still quite the character aren't you?'", "You both look around the courtyard and Ludovic says 'Come now, we need to get moving.' Will you follow Ludovic?");
-   ninth.addChoice("Yes");
-   ninth.addChoice("No");
+    NarrPoint second = NarrPoint("Something feels eery as though everything was stopped in time and the stranger says 'I thought I got all of them before you arrived but I guess that was a test of your strength'", "He looks at you 'My name is something you may not be able to pronounce but you can call me Ludovic.");
+    Choice firstChoice = Choice{ "What's your real name?", "'Curious are we?' He pauses 'You don't need to know though'. The hair on the back of your neck start to rise.", 2, 0 };
+    Choice secondChoice = Choice{ "Cool name", "'Still quite the character that used to be' You wonder what he means by that... It's as though he knows you but you don't know what he is.", 1, 1 };
+    first.addChoice(firstChoice);
+    first.addChoice(secondChoice);
 
-   NarrPoint tenth = NarrPoint("You follow Ludovic but something feels off in the air.", "You don't understand why he said 'You are still quite the character aren't you?', It's as though he knows you but you don't konw him. What do you say?");
-   tenth.addChoice("What did you mean by 'still quite the chracter'?");
-   tenth.addChoice("[Say nothing]");
+    NarrPoint third = NarrPoint("You wonder what he meant by that.", "Do you decide to ask him what he meant by that?");
+    Choice firstChoice = Choice{ "Yes", "'You have been here before... We have met before... Hermann.' He walks as though he has practiced this 'Let me tell you story...'", 0, 1 };
+    Choice secondChoice = Choice{ "No", "You say nothing and you continue on your journey with this strange individual who will hopefully tell you that this is all but a lucid dream.", 1, 0 };
+    first.addChoice(firstChoice);
+    first.addChoice(secondChoice);
 
-   NarrPoint eleventh = NarrPoint("He leads you back through the monastery and you are confused as to why he is taking you back inside", "What do you say?");
-   eleventh.addChoice("Where are we going?");
-   eleventh.addChoice("[Say nothing]");*/
+    NarrPoint fourth = NarrPoint("'Once upon a time there was a priest who broke his monastic vows... In order to be set free he agreed to write a great book which glorified the monastery in a single night...' He leads you back through the monastery. You are confused as to why he is taking you back inside", "Do you interrupt and ask him why?");
+    Choice firstChoice = Choice{ "Yes", "You suddenly feel a sharp pain hit your chest and you fall back 'Please don't interrupt me when I'm speaking of your past' He says so nonchalently", -1, -1 };
+    Choice secondChoice = Choice{ "No", "'However it were to be impossible for a single individual such as yourself to write a large book in one night... so you came to me!", 0, 0 };
+    first.addChoice(firstChoice);
+    first.addChoice(secondChoice);
 
+    NarrPoint fifth = NarrPoint("The place where he is leading you seems all so familiar to you... 'But you escaped the deal and managed to hop to the next life, but I found you again...' He looks at you 'I have been looking for you for a long time...'", "You are still confused and you are hoping this is all but a dream... ");
+    Choice firstChoice = Choice{ "What deal?", "    ", 0, 1 };
+    Choice secondChoice = Choice{ "What do you want?", "    ", 1, 0 };
+    Choice thirdChoice = Choice{ "Is this a dream?", "THIS IS NOT DREAM!", 0, -2 };
 }
 
 void Courtyard::setName(std::string nName)

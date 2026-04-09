@@ -1,10 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\PatsyGbson2501023\\Bsc1b-Workshop\\Textadventuregame\\",
+  "WorkspaceRootPath": "D:\\PatsyGibson2501023\\Bsc1b-Workshop\\Textadventuregame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\PatsyGbson2501023\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Courtyard.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|solutionrelative:Textadventuregame\\Courtyard.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\PatsyGibson2501023\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\LargeCell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|solutionrelative:Textadventuregame\\LargeCell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\PatsyGibson2501023\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\PrisonCell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|solutionrelative:Textadventuregame\\PrisonCell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,24 +18,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Courtyard.cpp",
-              "DocumentMoniker": "D:\\PatsyGbson2501023\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Courtyard.cpp",
-              "RelativeDocumentMoniker": "Textadventuregame\\Courtyard.cpp",
-              "ToolTip": "D:\\PatsyGbson2501023\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Courtyard.cpp",
-              "RelativeToolTip": "Textadventuregame\\Courtyard.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAYwDsAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "PrisonCell.cpp",
+              "DocumentMoniker": "D:\\PatsyGibson2501023\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\PrisonCell.cpp",
+              "RelativeDocumentMoniker": "Textadventuregame\\PrisonCell.cpp",
+              "ToolTip": "D:\\PatsyGibson2501023\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\PrisonCell.cpp",
+              "RelativeToolTip": "Textadventuregame\\PrisonCell.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-03-27T15:50:21.093Z",
+              "WhenOpened": "2026-03-16T15:48:19.349Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LargeCell.cpp",
+              "DocumentMoniker": "D:\\PatsyGibson2501023\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\LargeCell.cpp",
+              "RelativeDocumentMoniker": "Textadventuregame\\LargeCell.cpp",
+              "ToolTip": "D:\\PatsyGibson2501023\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\LargeCell.cpp",
+              "RelativeToolTip": "Textadventuregame\\LargeCell.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-03-16T15:47:56.189Z",
+              "EditorCaption": ""
             }
           ]
         }

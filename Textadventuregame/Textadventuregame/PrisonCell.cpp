@@ -87,7 +87,7 @@ void PrisonCell::runScenario()
         std::cout << story[plotIndex].getChoices()[userInp].healthEffect << " health" << std::endl;
         std::cout << story[plotIndex].getChoices()[userInp].skillEffect << " skill" << std::endl;
  
-        if (plotIndex == 4 && Choice = ninthChoice);
+        /*if (plotIndex == 4 && Choice = ninthChoice);
         {
             bool hasKey = true;
         }
@@ -109,7 +109,7 @@ void PrisonCell::runScenario()
 
 //Recommended to me to move this code from the main .cpp to here.
     
-    /*
+
     if (fourth.getChoices()[0] == "Yes") {
         cout << "I can tell you but first you must work with me... '" << endl;
 

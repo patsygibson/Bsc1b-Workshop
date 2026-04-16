@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\PatsyGibson2501023\\Bsc1b-Workshop\\Textadventuregame\\",
+  "WorkspaceRootPath": "D:\\New folder (2)\\Bsc1b-Workshop\\Textadventuregame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\PatsyGibson2501023\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\LargeCell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\New folder (2)\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\LargeCell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|solutionrelative:Textadventuregame\\LargeCell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\PatsyGibson2501023\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\PrisonCell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\New folder (2)\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\PrisonCell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|solutionrelative:Textadventuregame\\PrisonCell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -24,24 +24,23 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "PrisonCell.cpp",
-              "DocumentMoniker": "D:\\PatsyGibson2501023\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\PrisonCell.cpp",
+              "DocumentMoniker": "D:\\New folder (2)\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\PrisonCell.cpp",
               "RelativeDocumentMoniker": "Textadventuregame\\PrisonCell.cpp",
-              "ToolTip": "D:\\PatsyGibson2501023\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\PrisonCell.cpp",
+              "ToolTip": "D:\\New folder (2)\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\PrisonCell.cpp",
               "RelativeToolTip": "Textadventuregame\\PrisonCell.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-03-16T15:48:19.349Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-16T15:48:19.349Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "LargeCell.cpp",
-              "DocumentMoniker": "D:\\PatsyGibson2501023\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\LargeCell.cpp",
+              "DocumentMoniker": "D:\\New folder (2)\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\LargeCell.cpp",
               "RelativeDocumentMoniker": "Textadventuregame\\LargeCell.cpp",
-              "ToolTip": "D:\\PatsyGibson2501023\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\LargeCell.cpp",
+              "ToolTip": "D:\\New folder (2)\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\LargeCell.cpp",
               "RelativeToolTip": "Textadventuregame\\LargeCell.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAADMAAACAAQAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-03-16T15:47:56.189Z",
               "EditorCaption": ""

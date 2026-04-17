@@ -48,6 +48,9 @@
     <ClCompile Include="LargeCell.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CrumblingCell.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Character.h">
@@ -75,6 +78,9 @@
       <Filter>Header Files\Locations</Filter>
     </ClInclude>
     <ClInclude Include="LargeCell.h">
+      <Filter>Header Files\Locations</Filter>
+    </ClInclude>
+    <ClInclude Include="CrumblingCell.h">
       <Filter>Header Files\Locations</Filter>
     </ClInclude>
   </ItemGroup>

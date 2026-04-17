@@ -77,93 +77,19 @@ void PrisonCell::runScenario()
             std::cout << "[" << i << "]" << story[plotIndex].getChoices()[i].text << std::endl;
         }
         std::cin >> userInp;
-
-       
-
-        system("cls");
-        std::cout << "You chose: " << story[plotIndex].getChoices()[userInp].text << std::endl;
-        std::cout << story[plotIndex].getChoices()[userInp].outcome << std::endl;
-
-        std::cout << story[plotIndex].getChoices()[userInp].healthEffect << " health" << std::endl;
-        std::cout << story[plotIndex].getChoices()[userInp].skillEffect << " skill" << std::endl;
- 
-        /*if (plotIndex == 4 && Choice = ninthChoice);
-        {
-            bool hasKey = true;
-        }
-
-        if (plotIndex = 4 && Choice = tenthChoice); 
-        {
-            bool hasKey = false;
-            plotIndex - 1;
-
-        }
-
-        plotIndex += 1;
-        std::cout << "=================================================== " << std::endl;
     }
+
+
+
+    system("cls");
+    std::cout << "You chose: " << story[plotIndex].getChoices()[userInp].text << std::endl;
+    std::cout << story[plotIndex].getChoices()[userInp].outcome << std::endl;
+
+    std::cout << story[plotIndex].getChoices()[userInp].healthEffect << " health" << std::endl;
+    std::cout << story[plotIndex].getChoices()[userInp].skillEffect << " skill" << std::endl;
+
+    if (story[plotIndex].getChoices()[userInp].skillEffect > 0) {
+        hasKey = true;
+    }
+
 }
-
-
-
-
-//Recommended to me to move this code from the main .cpp to here.
-    
-
-    if (fourth.getChoices()[0] == "Yes") {
-        cout << "I can tell you but first you must work with me... '" << endl;
-
-    }
-    else if (fourth.getChoices()[1] == "No") {
-        string userInput;
-        cout << "'Fine have it your way', you start to feel dizzy and nauseous all of a sudden, 'Now I will ask you again, do you want to know why we are here?' " << endl;
-        cin >> userInput;
-        if (userInput == "Yes") {
-            cout << "I can tell you but first you must work with me' Will you cooperate ? " << endl;
-        }
-        else if (userInput == "No") {
-            cout << "'Very well, it seems you would prefer to rot in this cell and to become rats food, suit yourself' The stranger walks away and you feel a sharp pain your chest, it's getting harder to breathe and everything starts to fade to black..." << endl;
-            vector<NarrPoint> story = { first };
-            //You go back to the start of the scene Prison Cell. " break;
-        }
-
-
-    }
-
-
-
-
-
-
-
-    if (fifth.getChoices()[0] == "Yes") {
-        cout << "'Fantastic.' He chuckles 'Here, take this key' You have gained a key, you can now open the cell door. " << endl;
-
-    }
-    else if (fifth.getChoices()[1] == "No") {
-        cout << "'Very well, it seems you would prefer to rot in this cell and to become rats food, suit yourself' The stranger walks away and you feel a sharp pain your chest, it's getting harder to breathe and everything starts to fade to black..." << endl;
-        vector<NarrPoint> story = { fourth };
-        //Go back to last question
-    }
-
-
-
-    if (sixth.getChoices()[0] == "Yes") {
-        cout << "You open the cell door and you leave the cell, free to explore the rest of the monastery and to find out why you are here." << endl;
-        //Move on to the next scene which is the Courtyard.
-    }
-    else if (sixth.getChoices()[1] == "No") {
-        cout << "You decide to wait in the cell, the stranger speaks up 'Well what are you waiting for?' Open the cell!'" << endl;
-        vector<NarrPoint> story = { sixth };
-        //You go back to the previous question 'will you choose to escape or not?'
-    }
-    
-
-
-    struct Key {
-        string name;
-        string description;
-
-    };
-*/
-    //Maybe the if statements above should be changed, need help with this. 

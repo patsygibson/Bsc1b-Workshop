@@ -6,6 +6,7 @@
 #include "PrisonCell.h"
 #include "Courtyard.h"
 #include "LargeCell.h"
+#include "CrumblingCell.h"
 
 
 /*void gameinstruct() {
@@ -51,6 +52,8 @@ int main()
     PrisonCell Prison = PrisonCell("Prison Cell");
     Courtyard Courtyd = Courtyard("Courtyard");
     LargeCell LCell = LargeCell("Large Cell");
+    CrumblingCell CCell = CrumblingCell("Crumbling Cell");
+
     std::vector<Location*> chapters = { &Intro, &Prison, &Courtyd, &LCell }; //add Courtyard and final scene to this vector when they are done.
 
     /*

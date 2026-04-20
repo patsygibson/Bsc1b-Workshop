@@ -43,6 +43,10 @@ Courtyard::Courtyard(std::string iName) : Location()
 	this->story.push_back(fourth);
 	this->story.push_back(fifth);
 
+
+
+
+
 }
 
 void Courtyard::setName(std::string nName)

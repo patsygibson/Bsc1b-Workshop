@@ -10,7 +10,7 @@
 
 
 /*void gameinstruct() {
-    system("cls");
+ 
 
     cout << "                                                                                         + #########" << endl;
     cout << "   ..                                                                                     +#########" << endl;
@@ -54,7 +54,7 @@ int main()
     LargeCell LCell = LargeCell("Large Cell");
     CrumblingCell CCell = CrumblingCell("Crumbling Cell");
 
-    std::vector<Location*> chapters = { &Intro, &Prison, &Courtyd, &LCell }; //add Courtyard and final scene to this vector when they are done.
+    std::vector<Location*> chapters = { &Intro, &Prison, &Courtyd, &LCell, &CCell };
 
     /*
     std::vector<std::string> asciiArt = {};
@@ -65,10 +65,10 @@ int main()
     */
 
     int chapIndex = 0;
-    
 
-    while (chapIndex < chapters.size()) { 
-        std::cout << "         " <<  chapters[chapIndex]->getName() << std::endl;
+
+    while (chapIndex < chapters.size()) {
+        std::cout << "         " << chapters[chapIndex]->getName() << std::endl;
 
         //cout << asciiArt[chapIndex] << endl;
         chapters[chapIndex]->runScenario();
@@ -79,11 +79,7 @@ int main()
             std::cout << "Congratulations, you have completed the game!" << std::endl;
             break;
         }
-        
-       
+
+
     }
-
-} //This is the main function of the game, it will run call each location and narrpoints in order. Possibly
-//queue<string> chapters = { "Introscene", "Prison Cell", "Courtyard", "Final Scene" };
-
-//Struggle with Pointers. Struggle understanding std::
+}

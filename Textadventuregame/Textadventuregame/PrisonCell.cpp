@@ -69,6 +69,8 @@ void PrisonCell::runScenario()
     int userInp;
     bool hasKey = false;
 
+
+
     while (plotIndex >= 0 && plotIndex < this->story.size()) {
         std::cout << story[plotIndex].getPlot() << std::endl;
         std::cout << story[plotIndex].getQuestion() << std::endl;
@@ -77,19 +79,17 @@ void PrisonCell::runScenario()
             std::cout << "[" << i << "]" << story[plotIndex].getChoices()[i].text << std::endl;
         }
         std::cin >> userInp;
+
+        std::cout << "You chose: " << story[plotIndex].getChoices()[userInp].text << std::endl;
+        std::cout << story[plotIndex].getChoices()[userInp].outcome << std::endl;
+
+        std::cout << story[plotIndex].getChoices()[userInp].healthEffect << " health" << std::endl;
+        std::cout << story[plotIndex].getChoices()[userInp].skillEffect << " skill" << std::endl;
+
+        if (story[plotIndex].getChoices()[userInp].skillEffect > 0) {
+            hasKey = true;
+        }
+
+        plotIndex += 1;
     }
-
-
-
-    system("cls");
-    std::cout << "You chose: " << story[plotIndex].getChoices()[userInp].text << std::endl;
-    std::cout << story[plotIndex].getChoices()[userInp].outcome << std::endl;
-
-    std::cout << story[plotIndex].getChoices()[userInp].healthEffect << " health" << std::endl;
-    std::cout << story[plotIndex].getChoices()[userInp].skillEffect << " skill" << std::endl;
-
-    if (story[plotIndex].getChoices()[userInp].skillEffect > 0) {
-        hasKey = true;
-    }
-
 }

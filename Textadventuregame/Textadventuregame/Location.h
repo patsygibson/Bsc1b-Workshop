@@ -10,6 +10,7 @@ class Location
 protected:
 	std::string name;
 	std::string description;
+
 	std::vector<NarrPoint> story;
 
 public:

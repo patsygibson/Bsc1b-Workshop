@@ -29,32 +29,78 @@ void IntroScene::runScenario()
 	std::string getline;
 	int plotIndex = 0;
 
-	std::cout << "You are sitting in your office staring at the blank screen of your computer. All of a sudden, your computer starts to glitch and a message appears on the screen: 'Please enter your name to continue: ' " << std::endl;
-	std::getline(std::cin, userInput);
-	//std::cin >> userInput;
-	system("cls");
+	// ASCII art
+	std::cout << "                                                                                                                                                            " << std::endl;
+	std::cout << "                                                                                                                                                            " << std::endl;
+	std::cout << "                 @@%  @@@                      @@@                                        @@  @@@@      @@                                                  " << std::endl;
+	std::cout << "                @@     @          %             @@         @             @              @@     @+                   @           -                           " << std::endl;
+	std::cout << "               @@@    @         @@@@        @ @@@@       @@@@      @@@@  @@            @@@    -@       @@@#       @@@@@@     %@@@@@                         " << std::endl;
+	std::cout << "               @@@@   @         @  -@@       @  +@@      @  @@@      @@@  @             @@@   @@         @@#      @   @@          @@                        " << std::endl;
+	std::cout << "               @@@@  @          @   @@@     @%   @@      @   @@       @@@@              @@@  @@@@@@      @@+     @    @@       @  @@                        " << std::endl;
+	std::cout << "               @@@@ @           @    @@     @@   @@      @  @          @@@              @@@ @   @@@      @@+     @    @@      @   @@                        " << std::endl;
+	std::cout << "               @@@@@            @@    @     @@   @@      @@@         @ @@@              @@@@    @@@      @@+     @@   @@     @@   @@                        " << std::endl;
+	std::cout << "                @@@      @@     @@@  @      @@@# @@      @@@@       @@  @@@             @@@     @@@      @@+     @@@  @@     @@@  @@                        " << std::endl;
+	std::cout << "                @@     @@        @@@        @@@ @@@       @@@@     @@@  @@@@            @@     @@@      @@@      @@@ @@@     @@@=@@@                        " << std::endl;
+	std::cout << "               @  @@@@@@                                                                  @@@ @@@@                    @@                                    " << std::endl;
+	std::cout << "                                                                                                               @@@   @*                                     " << std::endl;
+	std::cout << "                                                                                                                                                            " << std::endl;
+
+	std::cout << "                             You are siting at your computer,                                                                    " << std::endl;
+	std::cout << "                                                               whiling away the hours...                                         " << std::endl;
+	std::cout << "                                                                                                                      + #########" << std::endl;
+	std::cout << "                                                                                                                      + #########" << std::endl;
+	std::cout << "                                ..                                                                                     +#########" << std::endl;
+	std::cout << "                              :*#**+=.                   :@@%###*************@@.                                       +#########" << std::endl;
+	std::cout << "                             -*******+-.                 :@+                 %@.                             .*:..    .=*********" << std::endl;
+	std::cout << "                             =********+-.                :@+                 %@.                           ..:**:.   ..=*********" << std::endl;
+	std::cout << "                            .********+-.                 :@+                 %@.  =@@@@@@@@@@*               .*+:.   ..=*********" << std::endl;
+	std::cout << "                              ..+****+:                  :@+                 %@   *@.       @@               .-+..     =*********" << std::endl;
+	std::cout << "                             ..=+++==..                  :@+                 %@   *@*+*****#@@+=.            .:+..     =*********" << std::endl;
+	std::cout << "                             :++++====-..                .@+                 %@   .-%@========%@.            .-*..     =*********" << std::endl;
+	std::cout << "                             =+========-.                .@@@@@@@@@@@@@@@@@@@@%   .:%@=-------%@             .-*..     -=========" << std::endl;
+	std::cout << "                             :+========-.                       :@*  .%@          #@*+++++++@@+:             .-*..     -=========" << std::endl;
+	std::cout << "                              .-===++=:                        .%@.   .@%.        @@       .@@               :+#..     -=========" << std::endl;
+	std::cout << "                              ..------.            -@%#################################################@%.   -#%:.     -=========" << std::endl;
+	std::cout << "                             .----::::::.          -@+                                                .%%.   =#@:.     -=========" << std::endl;
+	std::cout << "                             :::::::::-:.          -@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%.   =%@:.     .:::::::::" << std::endl;
+	std::cout << "                             .:::::::--:.             @@..@*                         .@#             :@#     -#@:.     .:::::::::" << std::endl;
+	std::cout << "                              .::::-==.               @@..@*                         .@#             :@#     -#%..     .:::::::::" << std::endl;
+	std::cout << "                              ..-====-.               @@ .@*                         .@#    .#%%+    :@*     :#%..     .:::::::::" << std::endl;
+	std::cout << "                             .+++++===-:.             @@ .@*                         .@#     ....    :@*     :#%..     .:::::::::" << std::endl;
+	std::cout << "                             =+=======--.             @@ .@*                         .@#             :@*     :#%..     -=========" << std::endl;
+	std::cout << "                             -+========:.             @@ .@*                         .@#.............-@*     :##.      -=========" << std::endl;
+	std::cout << "                             .-======-.               @@ .@+                          @@#############%@*     :##..     -=========" << std::endl;
+	std::cout << "                               .=*##*=.               @@ .@+                          @#             :@*     .##.      -=========" << std::endl;
+	std::cout << "                             .######**+:.             %@ .@+                          @#             :@+     .##.      -=========" << std::endl;
+	std::cout << "                             *##******+=.             %@ .@+                          @#    =@@@@.   :@+     .##.      -=========" << std::endl;
+	std::cout << "                             +#********-.             %@ .@+                          @#             :@+     ..+.      +#########" << std::endl;
+	std::cout << "                             .-*#***#+.               %@ .@+                          @#             :@+     ..=.      +#########" << std::endl;
+	std::cout << "                                                      %@@@@+                          @@@@@@@@@@@@@@@@@+     .:=.      +#########" << std::endl;
+	std::cout << "                                                                                                             .:-.      +#########" << std::endl;
+	std::cout << "                                                                                                                       +#########" << std::endl;
+
+
+
+	std::cout << "                                 All of a sudden, your computer starts to glitch and a message appears on the screen:       " << std::endl;
+	std::cout << "                                                                                                                            " << std::endl;
+	std::cout << "                                                          'Please enter your name to continue:                            ' " << std::endl;
+	std::cout << "                                                                                                                            " << std::endl;
+    std::getline(std::cin, userInput);
 
 
 	std::cout << "  Welcome, " << userInput << " ! " << std::endl;
-	std::cout << "   Error 404 " << std::endl;
-	std::cout << "===========================================" << "  " << std::endl;
+	std::cout << "                                 " << std::endl;
+	std::cout << "                Error 404            " << std::endl;
+	std::cout << "==================================================================================================================================================================" << "  " << std::endl;
+	std::cout << "                                                                                                     " << std::endl;
 	std::cout << "    The screen flashes, then briefly turns in a sea of blue pixels before quickly winking out... " << " ...Entering new timeline..." << std::endl;
+	std::cout << "                                                                                                 " << std::endl;
 
 
 	while (plotIndex >= 0 && plotIndex < this->story.size()) {
-		std::cout << story[plotIndex].getPlot() << std::endl;
-		std::cout << story[plotIndex].getQuestion() << std::endl;
-
-		for (int i = 0; i < story[plotIndex].getChoices().size(); i++) {
-			std::cout << "[" << i << "]" << story[plotIndex].getChoices()[i].text << std::endl;
-		}
-		int userInput;
-		std::cin >> userInput;
-		system("cls");
-		std::cout << "You chose: " << story[plotIndex].getChoices()[userInput].text << std::endl;
-
+		
 		plotIndex += 1;
-		std::cout << "=================================================== " << std::endl;
+		std::cout << "===============================================================================================================================================================" << std::endl;
 	}
 }
 

@@ -9,46 +9,12 @@
 #include "CrumblingCell.h"
 
 
-/*void gameinstruct() {
- 
-
-    cout << "                                                                                         + #########" << endl;
-    cout << "   ..                                                                                     +#########" << endl;
-    cout << " :*#**+=.                   :@@%###*************@@.                                       +#########" << endl;
-    cout << "-*******+-.                 :@+                 %@.                             .*:..    .=*********" << endl;
-    cout << "=********+-.                :@+                 %@.                           ..:**:.   ..=*********" << endl;
-    cout << ".********+-.                :@+                 %@.  =@@@@@@@@@@*               .*+:.   ..=*********" << endl;
-    cout << " ..+****+:                  :@+                 %@   *@.       @@               .-+..     =*********" << endl;
-    cout << "..=+++==..                  :@+                 %@   *@*+*****#@@+=.            .:+..     =*********" << endl;
-    cout << ":++++====-..                .@+                 %@   .-%@========%@.            .-*..     =*********" << endl;
-    cout << "=+========-.                .@@@@@@@@@@@@@@@@@@@@%   .:%@=-------%@             .-*..     -=========" << endl;
-    cout << ":+========-.                       :@*  .%@          #@*+++++++@@+:             .-*..     -=========" << endl;
-    cout << " .-===++=:                        .%@.   .@%.        @@       .@@               :+#..     -=========" << endl;
-    cout << " ..------.            -@%#################################################@%.   -#%:.     -=========" << endl;
-    cout << ".----::::::.          -@+                                                .%%.   =#@:.     -=========" << endl;
-    cout << ":::::::::-:.          -@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%.   =%@:.     .:::::::::" << endl;
-    cout << ".:::::::--:.             @@..@*                         .@#             :@#     -#@:.     .:::::::::" << endl;
-    cout << " .::::-==.               @@..@*                         .@#             :@#     -#%..     .:::::::::" << endl;
-    cout << " ..-====-.               @@ .@*                         .@#    .#%%+    :@*     :#%..     .:::::::::" << endl;
-    cout << ".+++++===-:.             @@ .@*                         .@#     ....    :@*     :#%..     .:::::::::" << endl;
-    cout << "=+=======--.             @@ .@*                         .@#             :@*     :#%..     -=========" << endl;
-    cout << "-+========:.             @@ .@*                         .@#.............-@*     :##.      -=========" << endl;
-    cout << ".-======-.               @@ .@+                          @@#############%@*     :##..     -=========" << endl;
-    cout << "  .=*##*=.               @@ .@+                          @#             :@*     .##.      -=========" << endl;
-    cout << ".######**+:.             %@ .@+                          @#             :@+     .##.      -=========" << endl;
-    cout << "*##******+=.             %@ .@+                          @#    =@@@@.   :@+     .##.      -=========" << endl;
-    cout << "+#********-.             %@ .@+                          @#             :@+     ..+.      +#########" << endl;
-    cout << ".-*#***#+.               %@ .@+                          @#             :@+     ..=.      +#########" << endl;
-    cout << "                         %@@@@+                          @@@@@@@@@@@@@@@@@+     .:=.      +#########" << endl;
-    cout << "                                                                                .:-.      +#########" << endl;
-    cout << "                                                                                         +#########" << endl;
-}*/ 
 
 int main()
 {
 
 
-    IntroScene Intro = IntroScene("Intro Scene");
+    IntroScene Intro = IntroScene("            ");
     PrisonCell Prison = PrisonCell("Prison Cell");
     Courtyard Courtyd = Courtyard("Courtyard");
     LargeCell LCell = LargeCell("Large Cell");
@@ -56,21 +22,14 @@ int main()
 
     std::vector<Location*> chapters = { &Intro, &Prison, &Courtyd, &LCell, &CCell };
 
-    /*
-    std::vector<std::string> asciiArt = {};
-    asciiArt.push_back("adaenfeofn pfefaa8dfhaw9dhawd0awd");
-    asciiArt.push_back("adaenfeofn pfefaa8dfhaw9dhawd0awd");
-    asciiArt.push_back("adaenfeofn pfefaa8dfhaw9dhawd0awd");
-    asciiArt.push_back("adaenfeofn pfefaa8dfhaw9dhawd0awd");
-    */
-
+  
     int chapIndex = 0;
 
 
     while (chapIndex < chapters.size()) {
         std::cout << "         " << chapters[chapIndex]->getName() << std::endl;
 
-        //cout << asciiArt[chapIndex] << endl;
+ 
         chapters[chapIndex]->runScenario();
 
 

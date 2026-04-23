@@ -123,27 +123,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Character.cpp" />
     <ClCompile Include="Courtyard.cpp" />
     <ClCompile Include="IntroScene.cpp" />
-    <ClCompile Include="Item.cpp" />
     <ClCompile Include="LargeCell.cpp" />
     <ClCompile Include="CrumblingCell.cpp" />
     <ClCompile Include="Location.cpp" />
-    <ClCompile Include="MysteriousStranger.cpp" />
     <ClCompile Include="NarrPoint.cpp" />
     <ClCompile Include="PrisonCell.cpp" />
     <ClCompile Include="Textadventuregame.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Character.h" />
     <ClInclude Include="Courtyard.h" />
     <ClInclude Include="IntroScene.h" />
-    <ClInclude Include="Item.h" />
     <ClInclude Include="LargeCell.h" />
     <ClInclude Include="CrumblingCell.h" />
     <ClInclude Include="Location.h" />
-    <ClInclude Include="MysteriousStranger.h" />
     <ClInclude Include="NarrPoint.h" />
     <ClInclude Include="PrisonCell.h" />
   </ItemGroup>

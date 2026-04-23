@@ -69,7 +69,45 @@ void PrisonCell::runScenario()
     int userInp;
     bool hasKey = false;
 
-
+   /* std::cout << "
+    std::cout << "                                                            @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                   " << std::endl;
+    std::cout << "                                                            @   @       @   @      @@   @      @   @@      @   @                                   " << std::endl;
+    std::cout << "                                                            @   @       @   @      @@   @      @   @@      @   @                                   " << std::endl;
+    std::cout << "                                                            @   @       @   @      @@   @      @   @@      @   @                                   " << std::endl;
+    std::cout << "                                                            @   @       @   @      @@   @      @   @@      @   @                                   " << std::endl;
+    std::cout << "                                                            @   @       @   @      @@   @      @   @@      @   @                                   " << std::endl;
+    std::cout << "                                                            @   @       @   @      @@   @      @   @@      @   @                                   " << std::endl;
+    std::cout << "                                                            @   @       @   @      @@   @      @   @@      @   @                                   " << std::endl;
+    std::cout << "                                                            @   @       @   @      @@   @      @   @@      @   @                                   " << std::endl;
+    std::cout << "                                                            @   @       @   @      @@   @      @   @@      @   @                                   " << std::endl;
+    std::cout << "                                                            @   @       @   @      @@   @      @   @@      @   @                                   " << std::endl;
+    std::cout << "                                                            @@@@@@@@@@@@@   @      @@   @      @   @@      @   @                                   " << std::endl;
+    std::cout << "                                                            @           @   @      @@   @      @   @@      @   @                                   " << std::endl;
+    std::cout << "                                                            @   @@@@@   @   @      @@   @      @   @@      @   @                                   " << std::endl;
+    std::cout << "                                                            @   @@ @@   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                   " << std::endl;
+    std::cout << "                                                            @     @     @   @      @@   @      @   @@      @   @                                   " << std::endl;
+    std::cout << "                                                            @     @     @   @      @@   @      @   @@      @   @                                   " << std::endl;
+    std::cout << "                                                            @@@@@@@@@@@@@   @      @@   @      @   @@      @   @                                   " << std::endl;
+    std::cout << "                                                            @   @       @   @      @@   @      @   @@      @   @                                   " << std::endl;
+    std::cout << "                                                            @   @       @   @      @@   @      @   @@      @   @                                   " << std::endl;
+    std::cout << "                                                            @   @       @   @      @@   @      @   @@      @   @                                   " << std::endl;
+    std::cout << "                                                            @   @       @   @      @@   @      @   @@      @   @                                   " << std::endl;
+    std::cout << "                                                            @   @       @   @      @@   @      @   @@      @   @                                   " << std::endl;
+    std::cout << "                                                            @   @       @   @      @@   @      @   @@      @   @                                   " << std::endl;
+    std::cout << "                                                            @   @       @   @      @@   @      @   @@      @   @                                   " << std::endl;
+    std::cout << "                                                            @   @       @   @      @@   @      @   @@      @   @                                   " << std::endl;
+    std::cout << "                                                            @   @       @   @      @@   @      @   @@      @   @                                   " << std::endl;
+	std::cout << "                                                            @   @       @   @      @@   @      @   @@      @   @                                   " << std::endl;
+	std::cout << "                                                           @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                   " << std::endl;
+	std::cout << "                                                                                                                                                   " << std::endl;
+      */                                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                                                 
+                                                                                                                                                                                                                                                                 
+                                                                                                                                                                                                                                                                 
+                                                                                                                                                                                                                                                                 
+                                                                                                                                                                                                                                                                 
+                                                                                                                                                                                                                                                                 
+                                                                                                                                                                                                                                 
 
     while (plotIndex >= 0 && plotIndex < this->story.size()) {
         std::cout << story[plotIndex].getPlot() << std::endl;

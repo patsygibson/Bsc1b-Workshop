@@ -104,6 +104,12 @@ void LargeCell::runScenario()
         system("cls");
         std::cout << "You chose: " << story[plotIndex].getChoices()[userInp].text << std::endl;
 
+        //Adding a condition to check if the player presses anything other than the expected input to prompt them to enter a valid input. This will prevent the game from crashing and will also make it more user-friendly.
+        if (userInp < 0 || userInp >= story[plotIndex].getChoices().size()) {     
+			std::cout << "Invalid choice. Please try again." << std::endl;
+            continue;
+        }
+
         plotIndex += 1;
         std::cout << "=================================================== " << std::endl;
     }

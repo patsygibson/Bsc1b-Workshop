@@ -124,6 +124,12 @@ void PrisonCell::runScenario()
         std::cout << story[plotIndex].getChoices()[userInp].healthEffect << " health" << std::endl;
         std::cout << story[plotIndex].getChoices()[userInp].skillEffect << " skill" << std::endl;
 
+        //Adding a condition to check if the player presses anything other than the expected input to prompt them to enter a valid input. This will prevent the game from crashing and will also make it more user-friendly.
+        if (userInp < 0 || userInp >= story[plotIndex].getChoices().size()) {
+            std::cout << "Invalid choice. Please try again." << std::endl;
+            continue;
+        }
+
         if (story[plotIndex].getChoices()[userInp].skillEffect > 0) {
             hasKey = true;
         }

@@ -5,6 +5,7 @@ LargeCell::LargeCell(std::string iName) : Location()
 {
     this->name = iName;
 
+	//Narrative points and choices for the large cell location
     NarrPoint first = NarrPoint("You enter another prison cell but this one has a very large book in it. Ludovic says 'Here, I have had enough of you... If you touch this book, it will take you back to your home back in 2026'", "Will you enter the cell and touch the book?");
     Choice firstChoice = Choice{ "Yes", "You step into the cell and you touch the book, you feel a strange sensation and all of a sudden the cell door behind you slams shut.", 0, 0 };
     Choice secondChoice = Choice{ "No", "You decide not to enter the cell and Ludovic pushes you inside and slams the door shut behind you.", 0, 0 };
@@ -65,7 +66,7 @@ LargeCell::LargeCell(std::string iName) : Location()
     ninth.addChoice(twentiethChoice);
     ninth.addChoice(twentyfirstChoice);
 
-
+	//Adding the narrative points to the story vector
     this->story.push_back(first);
     this->story.push_back(second);
     this->story.push_back(third);
@@ -88,11 +89,48 @@ std::string LargeCell::getName()
     return this->name;
 }
 
-void LargeCell::runScenario()
+void LargeCell::runScenario(int& healthEffect, int& skillEffect)
 {
     int plotIndex = 0;
     int userInp;
 
+    // ascii art
+    std::cout << "                                                                                                                                                                 " << std::endl;
+    std::cout << "                                                                                                                                                                 " << std::endl;
+    std::cout << "                                            @@@@@@@@@@@@@@@@@@@@@@@@@@@@         @@@@@@@@@@@@@@@@@@@@@@@@@@@@                                                    " << std::endl;
+    std::cout << "                                            @@                         @@@     @@@                         @@                                                    " << std::endl;
+    std::cout << "                                            @@                           @@. @@@                           @@                                                    " << std::endl;
+    std::cout << "                                       @@   @@                            @@@@@                            @@   @@                                               " << std::endl;
+    std::cout << "                                           @@   @@    .@@@@@@@@@@@@@@@@@ = @@@      @@@@@@@@@@@@@@@@@@     @@   @@                                               " << std::endl;
+    std::cout << "                                       @@   @@     @::::::::::::::@@@@@@   @@   @@@@@@#::::::::::::::@     @@   @@                                               " << std::endl;
+    std::cout << "                                       @@   @@                         #    @                              @@   @@                                               " << std::endl;
+    std::cout << "                                       @@   @@                                                             @@   @@                                               " << std::endl;
+    std::cout << "                                           @@   @@    @@@@@@@@@@@@@@@@@@@@@ % @@@@@@@@@@@@@@@@@@@@     @@   @@                                                   " << std::endl;
+    std::cout << "                                       @@   @@                        @@@  @@   @@@                        @@   @@                                               " << std::endl;
+    std::cout << "                                       @@   @@                             @@                              @@   @@                                               " << std::endl;
+    std::cout << "                                       @@   @@    @@@@@@@@@@@@@@@@@@@      @@       @@@@@@@@@@@@@@@@@@     @@   @@                                               " << std::endl;
+    std::cout << "                                                          @@   @@ * @@@@ % @@   @@@@@                      @@   @@                                               " << std::endl;
+    std::cout << "                                       @@   @@                             @@                              @@   @@                                               " << std::endl;
+    std::cout << "                                       @@   @@                             @@                              @@   @@                                               " << std::endl;
+    std::cout << "                                       @@   @@    @@@@@@@@@@@@@@@@@@@@@@   @@    @@@@@@@@@@@@@@@@@@@@@     @@   @@                                               " << std::endl;
+    std::cout << "                                       @@   @@                        @@ % @@   @@                         @@   @@                                               " << std::endl;
+    std::cout << "                                       @@   @@                             @@                              @@   @@                                               " << std::endl;
+    std::cout << "                                       @@   @@    @@@@@@@@@@@@@@@@@@@@     @@      @@@@@@@@@@@@@@@@@@@ = @@     @@                                               " << std::endl;
+    std::cout << "                                       @@   @@                       @@@@  @@   @@@@                            @@                                               " << std::endl;
+    std::cout << "                                       @@   @@                             @@                                   @@                                               " << std::endl;
+    std::cout << "                                       @@   @@         @@@@@@@@@@@@@ % # = @@ + % %@@@@@@@@@@@@@           @@   @@                                               " << std::endl;
+    std::cout << "                                       @@   @@     @@@@@@@@@@@@@@@@@@@@@   @@    @@@@@@@@@@@@@@@@@@@@@     @@   @@                                               " << std::endl;
+    std::cout << "                                       @@   @@                         @   @@ - @                          @@   @@                                               " << std::endl;
+    std::cout << "                                       @@   @@                             @@                              @@   @@                                               " << std::endl;
+    std::cout << "                                       @@   @@                             @@                              @@   @@                                               " << std::endl;
+    std::cout << "                                       @@   @@@@@@@@@@@@@@@@@@@@@@@@@@     @@      @@@@@@@@@@@@@@@@@@@@@@@@@    @@                                               " << std::endl;
+    std::cout << "                                                                @@ * @@@@@ % @  @@@@@                           @@                                               " << std::endl;
+    std::cout << "                                                     @@@@@@@@@@@@@@@@ + @@@@@@@ % @@@@@@@@@@@@@@@@                                                               " << std::endl;
+    std::cout << "                                        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@      @@@      @@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                                " << std::endl;
+    std::cout << "                                                                   @@@@@@@@# @@@@@@@@#                                                                           " << std::endl;
+    std::cout << "                                                                                                                                                                 " << std::endl;
+
+	//Main loop for the large cell scenario
     while (plotIndex >= 0 && plotIndex < this->story.size()) {
         std::cout << story[plotIndex].getPlot() << std::endl;
         std::cout << story[plotIndex].getQuestion() << std::endl;
@@ -101,14 +139,8 @@ void LargeCell::runScenario()
             std::cout << "[" << i << "]" << story[plotIndex].getChoices()[i].text << std::endl;
         }
         std::cin >> userInp;
-        system("cls");
         std::cout << "You chose: " << story[plotIndex].getChoices()[userInp].text << std::endl;
 
-        //Adding a condition to check if the player presses anything other than the expected input to prompt them to enter a valid input. This will prevent the game from crashing and will also make it more user-friendly.
-        if (userInp < 0 || userInp >= story[plotIndex].getChoices().size()) {     
-			std::cout << "Invalid choice. Please try again." << std::endl;
-            continue;
-        }
 
         plotIndex += 1;
         std::cout << "=================================================== " << std::endl;

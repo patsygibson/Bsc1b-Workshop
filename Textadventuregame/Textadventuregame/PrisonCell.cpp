@@ -21,9 +21,9 @@ PrisonCell::PrisonCell(std::string iName) : Location()
 
     NarrPoint third = NarrPoint("You look at the prison cell door, it is old and rusty.", "Would you like to attempt in opening it? ");
     Choice fifthChoice = Choice{ "Yes!", "You try to open the door but it won't budge, it's locked tight. The stranger chuckles 'You won't be able to get out that easily.' You don't have enough strength nor do you have key! But you do feel your strength slowly coming back.", 1, -1};
-    Choice sixthChoice = Choice{ "Nah. why bother!","You simply stand there awkwardly and you wait for the stranger to speak again.", 0, 0};
-    second.addChoice(fifthChoice);
-    second.addChoice(sixthChoice);
+    Choice sixthChoice = Choice{ "Nah. why bother!","You simply stand there awkwardly and you wait for the stranger to speak again. But he doesn't.", 0, 0};
+    third.addChoice(fifthChoice);
+    third.addChoice(sixthChoice);
 
     NarrPoint fourth = NarrPoint(" ", "Would you like to ask the stranger why you are here? ");
     Choice seventhChoice = Choice{ "Yes!", " ", 0 , 1  };
@@ -33,7 +33,7 @@ PrisonCell::PrisonCell(std::string iName) : Location()
 
     NarrPoint fifth = NarrPoint(" 'I can tell you exactly everything but first you must work with me' He says.  You have a choice to make.", "Will you choose to cooperate with the stranger or not? ");
     Choice ninthChoice = Choice{ "Okay...", "You get given a key by the stranger. ", - 1 , 1};
-    Choice tenthChoice = Choice{ "Hell no.", "'Why not?' I can give you this key", 1, -1};
+    Choice tenthChoice = Choice{ "Hell no.", "'Why not?' I can give you this key. He tosses the key at you.", 1, -1};
     fifth.addChoice(ninthChoice);
     fifth.addChoice(tenthChoice);
 
@@ -63,13 +63,13 @@ std::string PrisonCell::getName()
 
 
 
-void PrisonCell::runScenario()
+void PrisonCell::runScenario(int& userHealth, int& userSkill)
 {
     int plotIndex = 0;
     int userInp;
     bool hasKey = false;
 
-   /* std::cout << "
+    std::cout << "                                                                                                                                                   " << std::endl;
     std::cout << "                                                            @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                   " << std::endl;
     std::cout << "                                                            @   @       @   @      @@   @      @   @@      @   @                                   " << std::endl;
     std::cout << "                                                            @   @       @   @      @@   @      @   @@      @   @                                   " << std::endl;
@@ -100,7 +100,7 @@ void PrisonCell::runScenario()
 	std::cout << "                                                            @   @       @   @      @@   @      @   @@      @   @                                   " << std::endl;
 	std::cout << "                                                           @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                   " << std::endl;
 	std::cout << "                                                                                                                                                   " << std::endl;
-      */                                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                                              
                                                                                                                                                                                                                                                                  
                                                                                                                                                                                                                                                                  
                                                                                                                                                                                                                                                                  
@@ -124,16 +124,12 @@ void PrisonCell::runScenario()
         std::cout << story[plotIndex].getChoices()[userInp].healthEffect << " health" << std::endl;
         std::cout << story[plotIndex].getChoices()[userInp].skillEffect << " skill" << std::endl;
 
-        //Adding a condition to check if the player presses anything other than the expected input to prompt them to enter a valid input. This will prevent the game from crashing and will also make it more user-friendly.
-        if (userInp < 0 || userInp >= story[plotIndex].getChoices().size()) {
-            std::cout << "Invalid choice. Please try again." << std::endl;
-            continue;
-        }
 
         if (story[plotIndex].getChoices()[userInp].skillEffect > 0) {
             hasKey = true;
         }
 
         plotIndex += 1;
+        std::cout << "=================================================== " << std::endl;
     }
 }

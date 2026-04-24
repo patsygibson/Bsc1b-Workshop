@@ -21,6 +21,6 @@ public:
 	std::string getName();
 	std::string getDescription();
 
-	virtual void runScenario();
+	virtual void runScenario(int& userHealth, int& userSkill) = 0;
 
 };

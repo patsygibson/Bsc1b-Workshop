@@ -14,6 +14,6 @@ public:
 	void setName(std::string nName);
 	std::string getName();
 
-	void runScenario() override;
+	void runScenario(int& userHealth, int& userSkill) override;
 };
 

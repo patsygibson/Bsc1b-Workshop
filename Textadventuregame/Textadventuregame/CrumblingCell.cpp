@@ -4,7 +4,7 @@
 CrumblingCell::CrumblingCell(std::string iName) : Location()
 {
     this->name = iName;
-
+	//Narrative points and choices for the crumbling cell location
     NarrPoint first = NarrPoint("'Well done Hermann...' Ludovic says 'Just one more thing' You feel a sudden energy grab you and tighten around you, you feel yourself being lifted up and you are now floating in the air. Ludovic says 'Now we made a deal, you have your end of the bargain, you get to go back to your timeline, now I get my end of the bargain.' You feel dark energy starting to spread across the cell. Ludovic laughs 'Now I have full power over the lands, the evils of hell can be unleashed, thanks to you.'", "What do you do?");
     Choice firstChoice = Choice{ "Fight back against Ludovic", "You try to fight back against Ludovic but you are no match for him, you feel the dark energy consume you more.", 0, -1 };
     Choice secondChoice = Choice{ "Shout for help", "You shout for help but no one can hear you, you feel the dark energy consume you more.", 0, -1 };
@@ -44,7 +44,7 @@ CrumblingCell::CrumblingCell(std::string iName) : Location()
     fifth.addChoice(thirteenthChoice);
     fifth.addChoice(fourteenthChoice);
 
-
+	//Adding the narrative points to the story vector
     this->story.push_back(first);
     this->story.push_back(second);
     this->story.push_back(third);
@@ -63,68 +63,23 @@ std::string CrumblingCell::getName()
     return this->name;
 }
 
-void CrumblingCell::runScenario()
+void CrumblingCell::runScenario(int& healthEffect, int& skillEffect)
 {
     int plotIndex = 0;
     int userInp;
 
 
-/*
- std::cout << "                                                                                                                                                                 " << std::endl;
- std::cout << "                                                                                                                                                                 " << std::endl;
- std::cout << "                                            @@@@@@@@@@@@@@@@@@@@@@@@@@@@         @@@@@@@@@@@@@@@@@@@@@@@@@@@@                                                    " << std::endl;
- std::cout << "                                            @@                         @@@     @@@                         @@                                                    " << std::endl;
- std::cout << "                                            @@                           @@. @@@                           @@                                                    " << std::endl;
- std::cout << "                                       @@   @@                            @@@@@                            @@   @@                                               " << std::endl;
- std::cout << "                                           @@   @@    .@@@@@@@@@@@@@@@@@ = @@@      @@@@@@@@@@@@@@@@@@     @@   @@                                               " << std::endl;
- std::cout << "                                       @@   @@     @::::::::::::::@@@@@@   @@   @@@@@@#::::::::::::::@     @@   @@                                               " << std::endl;
- std::cout << "                                       @@   @@                         #    @                              @@   @@                                               " << std::endl;
- std::cout << "                                       @@   @@                                                             @@   @@                                               " << std::endl;
- std::cout << "                                           @@   @@    @@@@@@@@@@@@@@@@@@@@@ % @@@@@@@@@@@@@@@@@@@@     @@   @@                                                   " << std::endl;
- std::cout << "                                       @@   @@                        @@@  @@   @@@                        @@   @@                                               " << std::endl;
- std::cout << "                                       @@   @@                             @@                              @@   @@                                               " << std::endl;
- std::cout << "                                       @@   @@    @@@@@@@@@@@@@@@@@@@      @@       @@@@@@@@@@@@@@@@@@     @@   @@                                               " << std::endl;
- std::cout << "                                                          @@   @@ * @@@@ % @@   @@@@@                      @@   @@                                               " << std::endl;
- std::cout << "                                       @@   @@                             @@                              @@   @@                                               " << std::endl;
- std::cout << "                                       @@   @@                             @@                              @@   @@                                               " << std::endl;
- std::cout << "                                       @@   @@    @@@@@@@@@@@@@@@@@@@@@@   @@    @@@@@@@@@@@@@@@@@@@@@     @@   @@                                               " << std::endl;
- std::cout << "                                       @@   @@                        @@ % @@   @@                         @@   @@                                               " << std::endl;
- std::cout << "                                       @@   @@                             @@                              @@   @@                                               " << std::endl;
- std::cout << "                                       @@   @@    @@@@@@@@@@@@@@@@@@@@     @@      @@@@@@@@@@@@@@@@@@@ = @@     @@                                               " << std::endl;
- std::cout << "                                       @@   @@                       @@@@  @@   @@@@                            @@                                               " << std::endl;
- std::cout << "                                       @@   @@                             @@                                   @@                                               " << std::endl;
- std::cout << "                                       @@   @@         @@@@@@@@@@@@@ % # = @@ + % %@@@@@@@@@@@@@           @@   @@                                               " << std::endl;
- std::cout << "                                       @@   @@     @@@@@@@@@@@@@@@@@@@@@   @@    @@@@@@@@@@@@@@@@@@@@@     @@   @@                                               " << std::endl;
- std::cout << "                                       @@   @@                         @   @@ - @                          @@   @@                                               " << std::endl;
- std::cout << "                                       @@   @@                             @@                              @@   @@                                               " << std::endl;
- std::cout << "                                       @@   @@                             @@                              @@   @@                                               " << std::endl;
- std::cout << "                                       @@   @@@@@@@@@@@@@@@@@@@@@@@@@@     @@      @@@@@@@@@@@@@@@@@@@@@@@@@    @@                                               " << std::endl;
- std::cout << "                                                                @@ * @@@@@ % @  @@@@@                           @@                                               " << std::endl;
- std::cout << "                                                     @@@@@@@@@@@@@@@@ + @@@@@@@ % @@@@@@@@@@@@@@@@                                                               " << std::endl;
- std::cout << "                                        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@      @@@      @@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                                " << std::endl;
- std::cout << "                                                                   @@@@@@@@# @@@@@@@@#                                                                           " << std::endl;
- std::cout << "                                                                                                                                                                 " << std::endl;
- */
 
 
-
-
-
-
-
-
-
-
-
+ //Main loop for the crumbling cell scenario
     while (plotIndex >= 0 && plotIndex < this->story.size()) {
         std::cout << story[plotIndex].getPlot() << std::endl;
         std::cout << story[plotIndex].getQuestion() << std::endl;
 
         for (int i = 0; i < story[plotIndex].getChoices().size(); i++) {
-            std::cout << "[" << i << "]" << story[plotIndex].getChoices()[i].text << std::endl;
+            std::cout << "[" << i << "]" << story[plotIndex].getChoices()[i].text << std::endl; 
         }
         std::cin >> userInp;
-        system("cls");
         std::cout << "You chose: " << story[plotIndex].getChoices()[userInp].text << std::endl;
 
         plotIndex += 1;

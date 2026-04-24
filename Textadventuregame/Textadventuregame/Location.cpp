@@ -25,7 +25,7 @@ std::string Location::getDescription()
 	return this->description;
 }
 
-void Location::runScenario()
+void Location::runScenario(int& userHealth, int& userSkill)
 {
 	std::cout << "This is a generic location, there is no scenario to run." << std::endl;
 }

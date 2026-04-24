@@ -56,13 +56,13 @@
     <ClInclude Include="Location.h">
       <Filter>Header Files\Locations</Filter>
     </ClInclude>
-    <ClInclude Include="PrisonCell.h">
-      <Filter>Header Files\Locations</Filter>
-    </ClInclude>
     <ClInclude Include="LargeCell.h">
       <Filter>Header Files\Locations</Filter>
     </ClInclude>
     <ClInclude Include="CrumblingCell.h">
+      <Filter>Header Files\Locations</Filter>
+    </ClInclude>
+    <ClInclude Include="PrisonCell.h">
       <Filter>Header Files\Locations</Filter>
     </ClInclude>
   </ItemGroup>

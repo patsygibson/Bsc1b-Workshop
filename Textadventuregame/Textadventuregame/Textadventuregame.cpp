@@ -12,34 +12,37 @@
 
 int main()
 {
-
-
+    
+	// Create instances of each location    
     IntroScene Intro = IntroScene("            ");
-    PrisonCell Prison = PrisonCell("Prison Cell");
-    Courtyard Courtyd = Courtyard("Courtyard");
-    LargeCell LCell = LargeCell("Large Cell");
-    CrumblingCell CCell = CrumblingCell("Crumbling Cell");
+    PrisonCell Prison = PrisonCell("\033[93m  Location 1: Prison cell  \033[0m");
+    Courtyard Courtyd = Courtyard("\033[93m   Location 2: Courtyard    \033[0m");
+    LargeCell LCell = LargeCell("\033[93m    Location 3: Large Cell   \033[0m");
+    CrumblingCell CCell = CrumblingCell("\033[93m   The cell is crumbling...   \033[0m");
 
-    std::vector<Location*> chapters = { &Intro, &Prison, &Courtyd, &LCell, &CCell };
+	std::vector<Location*> chapters = { &Intro, &Prison, &Courtyd, &LCell, &CCell }; // Store the locations in a vector for easy access
 
-  
     int chapIndex = 0;
+    int userHealth = 10;
+    int userSkill = 10;
 
+    while (chapIndex < chapters.size())
+    {
+        std::cout << chapters[chapIndex]->getName() << std::endl;
 
-    while (chapIndex < chapters.size()) {
-        std::cout << "         " << chapters[chapIndex]->getName() << std::endl;
+        chapters[chapIndex]->runScenario(userHealth, userSkill);
 
- 
-        chapters[chapIndex]->runScenario();
+        std::cout << "Score: " << (userHealth + userSkill) << std::endl;
 
+        std::cout << "Press Enter...\n";
+        std::string temp;
+        std::getline(std::cin, temp);
 
-        chapIndex += 1;
-        if (chapIndex == chapters.size()) {
-            std::cout << "Congratulations, you have completed the game!" << std::endl;
-            break;
-        }
-
-
+        chapIndex++;
     }
 
+    std::cout << "\nFINAL SCORE: " << (userHealth + userSkill) << std::endl;
+
 }
+
+//If (userInp is not one of the choices) { cout << "Invalid input, try again." } else { userHealth += healthEffect; userSkill += skillEffect; plotIndex = nextPlotIndex; } 

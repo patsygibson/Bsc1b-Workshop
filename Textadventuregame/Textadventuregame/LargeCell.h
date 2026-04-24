@@ -10,7 +10,7 @@ public:
 	void setName(std::string nName);
 	std::string getName();
 
-	void runScenario() override;
+	void runScenario(int& healthEffect, int& skillEffect) override;
 
 };
 

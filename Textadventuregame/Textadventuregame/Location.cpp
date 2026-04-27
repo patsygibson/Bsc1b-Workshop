@@ -29,3 +29,25 @@ void Location::runScenario(int& userHealth, int& userSkill)
 {
 	std::cout << "This is a generic location, there is no scenario to run." << std::endl;
 }
+
+
+
+int safeInput(int min, int max)
+{
+	int userInp;
+
+	while (true)
+	{
+		std::cin >> userInp;
+		if (userInp >= min && userInp <= max)
+		{
+			return userInp;
+		}
+		else
+		{
+			std::cout << "Invalid input, please enter a number between " << min << " and " << max << "." << std::endl;
+		}
+
+
+	}
+}

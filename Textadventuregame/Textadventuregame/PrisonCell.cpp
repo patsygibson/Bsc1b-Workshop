@@ -62,13 +62,13 @@ std::string PrisonCell::getName()
 }
 
 
-
 void PrisonCell::runScenario(int& userHealth, int& userSkill)
 {
     int plotIndex = 0;
     int userInp;
     bool hasKey = false;
-
+ 
+  
     std::cout << "                                                                                                                                                   " << std::endl;
     std::cout << "                                                            @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                   " << std::endl;
     std::cout << "                                                            @   @       @   @      @@   @      @   @@      @   @                                   " << std::endl;
@@ -105,7 +105,8 @@ void PrisonCell::runScenario(int& userHealth, int& userSkill)
                                                                                                                                                                                                                                                                  
                                                                                                                                                                                                                                                                  
                                                                                                                                                                                                                                                                  
-                                                                                                                                                                                                                                                                 
+                                      
+
                                                                                                                                                                                                                                                                  
                                                                                                                                                                                                                                  
 
@@ -116,14 +117,22 @@ void PrisonCell::runScenario(int& userHealth, int& userSkill)
         for (int i = 0; i < story[plotIndex].getChoices().size(); i++) {
             std::cout << "[" << i << "]" << story[plotIndex].getChoices()[i].text << std::endl;
         }
-        std::cin >> userInp;
+		                                     
+       
+        std::cout << "Enter your choice: " << std::endl;
+        userInp = safeInput(0, story[plotIndex].getChoices().size()-1);
+
+
+
 
         std::cout << "You chose: " << story[plotIndex].getChoices()[userInp].text << std::endl;
         std::cout << story[plotIndex].getChoices()[userInp].outcome << std::endl;
 
+
         std::cout << story[plotIndex].getChoices()[userInp].healthEffect << " health" << std::endl;
         std::cout << story[plotIndex].getChoices()[userInp].skillEffect << " skill" << std::endl;
-
+        userHealth += story[plotIndex].getChoices()[userInp].healthEffect; 
+        userSkill += story[plotIndex].getChoices()[userInp].skillEffect;
 
         if (story[plotIndex].getChoices()[userInp].skillEffect > 0) {
             hasKey = true;

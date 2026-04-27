@@ -15,4 +15,5 @@ public:
 	
 	void runScenario(int& userHealth, int& userSkill) override;
 };
+int safeInput(int min, int max);
 

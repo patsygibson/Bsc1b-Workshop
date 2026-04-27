@@ -10,6 +10,8 @@
 
 
 
+
+
 int main()
 {
     
@@ -22,7 +24,7 @@ int main()
 
 	std::vector<Location*> chapters = { &Intro, &Prison, &Courtyd, &LCell, &CCell }; // Store the locations in a vector for easy access
 
-    int chapIndex = 0;
+    int chapIndex = 0;  
     int userHealth = 10;
     int userSkill = 10;
 
@@ -32,9 +34,9 @@ int main()
 
         chapters[chapIndex]->runScenario(userHealth, userSkill);
 
-        std::cout << "Score: " << (userHealth + userSkill) << std::endl;
+        std::cout << "\033[36m Score: " << (userHealth + userSkill) << std::endl;
 
-        std::cout << "Press Enter...\n";
+        std::cout << "Press Enter to continue... \033[0m" << std::endl;
         std::string temp;
         std::getline(std::cin, temp);
 
@@ -44,5 +46,3 @@ int main()
     std::cout << "\nFINAL SCORE: " << (userHealth + userSkill) << std::endl;
 
 }
-
-//If (userInp is not one of the choices) { cout << "Invalid input, try again." } else { userHealth += healthEffect; userSkill += skillEffect; plotIndex = nextPlotIndex; } 

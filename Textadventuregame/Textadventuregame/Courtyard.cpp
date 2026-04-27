@@ -18,7 +18,7 @@ Courtyard::Courtyard(std::string iName) : Location()
     second.addChoice(thirdChoice);
     second.addChoice(fourthChoice);
 
-    NarrPoint third = NarrPoint("You wonder what he meant by that.", "Do you decide to ask him what he meant by that?");
+    NarrPoint third = NarrPoint("You wonder what he meant by his name is something you won't be able pronunce. Perhaps he's foreign?", "Do you decide to ask him?");
     Choice fifthChoice = Choice{ "Yes", "'You have been here before... We have met before... Hermann.' He walks as though he has practiced this 'Let me tell you story...'", 0, 1 };
     Choice sixthChoice = Choice{ "No", "You say nothing and you continue on your journey with this strange individual who will hopefully tell you that this is all but a lucid dream.", 1, 0 };
     third.addChoice(fifthChoice);
@@ -120,9 +120,16 @@ void Courtyard::runScenario(int& userHealth, int& userSkill)
         for (int i = 0; i < story[plotIndex].getChoices().size(); i++) {
 			std::cout << "[" << i << "]" << story[plotIndex].getChoices()[i].text << std::endl;  //Display the choices for the current narrative point
         }
-        std::cin >> userInp;
+        
+        std::cout << "Enter your choice: " << std::endl;
+        userInp = safeInput(0, story[plotIndex].getChoices().size() - 1);
   
 		std::cout << "You chose: " << story[plotIndex].getChoices()[userInp].text << std::endl;  //Display the choice the user made
+
+        std::cout << story[plotIndex].getChoices()[userInp].healthEffect << " health" << std::endl;
+        std::cout << story[plotIndex].getChoices()[userInp].skillEffect << " skill" << std::endl;
+        userHealth += story[plotIndex].getChoices()[userInp].healthEffect; 
+        userSkill += story[plotIndex].getChoices()[userInp].skillEffect;
 
         plotIndex += 1;
         std::cout << "=================================================== " << std::endl;

@@ -89,7 +89,7 @@ std::string LargeCell::getName()
     return this->name;
 }
 
-void LargeCell::runScenario(int& healthEffect, int& skillEffect)
+void LargeCell::runScenario(int& userHealth, int& userSkill)
 {
     int plotIndex = 0;
     int userInp;
@@ -138,9 +138,16 @@ void LargeCell::runScenario(int& healthEffect, int& skillEffect)
         for (int i = 0; i < story[plotIndex].getChoices().size(); i++) {
             std::cout << "[" << i << "]" << story[plotIndex].getChoices()[i].text << std::endl;
         }
-        std::cin >> userInp;
+      
+        std::cout << "Enter your choice: " << std::endl;
+        userInp = safeInput(0, story[plotIndex].getChoices().size() - 1);
+
         std::cout << "You chose: " << story[plotIndex].getChoices()[userInp].text << std::endl;
 
+        std::cout << story[plotIndex].getChoices()[userInp].healthEffect << " health" << std::endl;
+        std::cout << story[plotIndex].getChoices()[userInp].skillEffect << " skill" << std::endl;
+        userHealth += story[plotIndex].getChoices()[userInp].healthEffect;
+        userSkill += story[plotIndex].getChoices()[userInp].skillEffect;
 
         plotIndex += 1;
         std::cout << "=================================================== " << std::endl;

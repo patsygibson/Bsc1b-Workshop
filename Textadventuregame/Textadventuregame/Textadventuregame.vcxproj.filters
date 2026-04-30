@@ -42,6 +42,9 @@
     <ClCompile Include="CrumblingCell.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Weapon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="NarrPoint.h">
@@ -64,6 +67,9 @@
     </ClInclude>
     <ClInclude Include="PrisonCell.h">
       <Filter>Header Files\Locations</Filter>
+    </ClInclude>
+    <ClInclude Include="Weapon.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

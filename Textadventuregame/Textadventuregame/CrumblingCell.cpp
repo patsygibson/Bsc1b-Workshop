@@ -67,8 +67,23 @@ void CrumblingCell::runScenario(int& userHealth, int& userSkill)
 {
     int plotIndex = 0;
     int userInp;
-
-
+    
+    //ascii art
+	std::cout << "                                                                                                                          " << std::endl;
+	std::cout << "                                                 =@@@@@@@%#***#@@@@@@@-                                                   " << std::endl;
+	std::cout << "                                            +@@@%=                    =%@@*                                               " << std::endl;
+    std::cout << "                                        %@@@-                              @@@                                            " << std::endl;
+	std::cout << "                                    :@@@                         *@=          @@#                                         " << std::endl;
+    std::cout << "                                 .@@*                                    .      +@#                                       " << std::endl;
+    std::cout << "                               *@@                                       @* -     @@:                                     " << std::endl;
+    std::cout << "                             @@-     @@                                             @@                                    " << std::endl;
+    std::cout << "                           %@-   .%@@=                                               #@                                   " << std::endl;
+    std::cout << "                         :@*                                                          #@                                  " << std::endl;
+    std::cout << "                        *@          .-@                         +:                     #@                                 " << std::endl;
+    std::cout << "                       @@          @.                 @@      @@#                    @@ @@                                " << std::endl;
+    std::cout << "                      #@   @@.                                                          :@-                               " << std::endl;
+	std::cout << "                     -@     .@:                           -     =%@@@@@@              @. @@                               " << std::endl;
+     
  //Main loop for the crumbling cell scenario
     while (plotIndex >= 0 && plotIndex < this->story.size()) {
         std::cout << story[plotIndex].getPlot() << std::endl;

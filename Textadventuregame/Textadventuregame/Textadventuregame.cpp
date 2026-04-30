@@ -12,6 +12,7 @@
 
 
 
+
 int main()
 {
     
@@ -21,6 +22,7 @@ int main()
     Courtyard Courtyd = Courtyard("\033[93m   Location 2: Courtyard    \033[0m");
     LargeCell LCell = LargeCell("\033[93m    Location 3: Large Cell   \033[0m");
     CrumblingCell CCell = CrumblingCell("\033[93m   The cell is crumbling...   \033[0m");
+
 
 	std::vector<Location*> chapters = { &Intro, &Prison, &Courtyd, &LCell, &CCell }; // Store the locations in a vector for easy access
 
@@ -45,4 +47,10 @@ int main()
 
     std::cout << "\nFINAL SCORE: " << (userHealth + userSkill) << std::endl;
 
+	//If the player's score is below 0 the game ends
+    if (userHealth + userSkill < 0)
+    {
+        std::cout << "Your score is below 0, you slowly lose yourself and everything goes black." << std::endl;
+    }
+    
 }

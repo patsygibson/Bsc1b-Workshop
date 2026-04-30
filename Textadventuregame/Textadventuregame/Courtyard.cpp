@@ -1,10 +1,10 @@
 #include "Courtyard.h"
 #include "NarrPoint.h"
+//#include "Weapon.h"
 
 Courtyard::Courtyard(std::string iName) : Location()
 {
 	this->name = iName;       
-
 	//Narrative points and choices for the courtyard location   
     NarrPoint first = NarrPoint("You both walk outside into the courtyard...", "All of sudden a guard is stood in front of you! 'Stab him!' the stranger orders you, 'Do it now!', will you obey the stranger's orders?");
     Choice firstChoice = Choice{ "Yes", "You succesfully stab the guard 'My, my, I'm impressed... Hermann' he smirks... But your name is not Hermanm...", 0, 1 };
@@ -45,10 +45,6 @@ Courtyard::Courtyard(std::string iName) : Location()
 	this->story.push_back(fourth);
 	this->story.push_back(fifth);
 
-
-
-
-
 }
 
 void Courtyard::setName(std::string nName)
@@ -66,6 +62,7 @@ void Courtyard::runScenario(int& userHealth, int& userSkill)
 {
     int plotIndex = 0;
     int userInp;
+	//Weapon weapon = Weapon("Old Rusty Sword", "An ancient sword which looks as it dates back to old Sumerian times.",);
 
     //ascii art
     std::cout << "                                                                                                                                                            " << std::endl;
@@ -111,7 +108,6 @@ void Courtyard::runScenario(int& userHealth, int& userSkill)
     std::cout <<  "                                                                                                                                                            " << std::endl;
   
 
-
 	//Main loop for the courtyard scenario
     while (plotIndex >= 0 && plotIndex < this->story.size()) {
         std::cout << story[plotIndex].getPlot() << std::endl;
@@ -130,7 +126,15 @@ void Courtyard::runScenario(int& userHealth, int& userSkill)
         std::cout << story[plotIndex].getChoices()[userInp].skillEffect << " skill" << std::endl;
         userHealth += story[plotIndex].getChoices()[userInp].healthEffect; 
         userSkill += story[plotIndex].getChoices()[userInp].skillEffect;
-
+        
+        
+     //When you gain the sword you gain 2 skills 
+        if (plotIndex == 0)
+        {
+            std::cout << "You have gained the sword! +2 skill" << std::endl;
+            userSkill += 2;
+			//std::cout << Weapon.getName() << ": " << Weapon.getDescription() << std::endl;
+		}
         plotIndex += 1;
         std::cout << "=================================================== " << std::endl;
     }

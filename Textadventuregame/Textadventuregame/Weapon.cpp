@@ -2,8 +2,8 @@
 
 Weapon::Weapon()
 {
-	this->name = "Old Rusty Sword";
-	this->description = "An ancient sword which looks as it dates back to old Sumerian times.";
+	this->name = "Unnamed Weapon";
+	this->description = "No description";
 }
 
 Weapon::Weapon(std::string nName, std::string nDesc)
@@ -21,8 +21,24 @@ std::string Weapon::getName()
 std::string Weapon::getDescription()
 {
 	return this->description;
+
 }
+std::string Weapon::setName()
+{
+	return this->name;
+}
+
+std::string Weapon::setDescription()
+{
+	return this->description;
+}
+
+void Weapon::setEquipped(bool equipped)
+{
+	itemEquipped = equipped;
+}
+
 bool Weapon::isEquipped()
 {
-	return true;
+	return itemEquipped;
 }

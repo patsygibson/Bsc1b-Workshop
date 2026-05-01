@@ -6,7 +6,7 @@ PrisonCell::PrisonCell(std::string iName) : Location()
     this->name = iName;
 
 
-    NarrPoint first = NarrPoint("You wake up in a cold damp room. ", " You hear distant screams and the clanging of metal. You look around and you realise you are in a old prison cell. Suddenly you hear a voice echo from the shadows... 'Ah there you are...' the stranger says 'so you were brave enough to enter your name after all'. Your eyes try to adjust to the dimness of the cell and you try to make this figure. You don't recognise them but their voice sounds familiar somehow. They speak again 'I am guessing you would like to know where you are.' ");
+    NarrPoint first = NarrPoint("You wake up in a cold damp room. ", " You hear distant screams and the clanging of metal. You look around and you realise you are in a old prison cell. Suddenly you hear a voice echo from the shadows... 'Ah there you are...' the stranger says 'so you were brave enough to enter your name after all'. Your eyes try to adjust to the dimness of the cell and you try to make this figure. You don't recognise them but their voice sounds familiar somehow. They speak again 'I am guessing you would like to know where you are.'  ");
     Choice firstChoice = Choice{"Yes", "'You're a little heazy but here take some water and bread, you will need the energy'.  You eat the bread and the water he offers to you and you feel a little more rejuvinated after your travel.", 1, 1};
     Choice secondChoice = Choice{ "No", "The stranger chuckles and says 'Of course you don't, still a little dazed from your travels back.", 0, 0};
     first.addChoice(firstChoice);
@@ -67,9 +67,9 @@ void PrisonCell::runScenario(int& userHealth, int& userSkill)
     int plotIndex = 0;
     int userInp;
     bool hasKey = false;
- 
-  
-    std::cout << "                                                                                                                                                   " << std::endl;
+
+
+    std::cout << "\033[90m                                                                                                                                                   " << std::endl;
     std::cout << "                                                            @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                   " << std::endl;
     std::cout << "                                                            @   @       @   @      @@   @      @   @@      @   @                                   " << std::endl;
     std::cout << "                                                            @   @       @   @      @@   @      @   @@      @   @                                   " << std::endl;
@@ -99,7 +99,7 @@ void PrisonCell::runScenario(int& userHealth, int& userSkill)
     std::cout << "                                                            @   @       @   @      @@   @      @   @@      @   @                                   " << std::endl;
 	std::cout << "                                                            @   @       @   @      @@   @      @   @@      @   @                                   " << std::endl;
 	std::cout << "                                                           @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                   " << std::endl;
-	std::cout << "                                                                                                                                                   " << std::endl;
+	std::cout << "                                                                                                                                                   \033[0m" << std::endl;
                                                                                                                                                                                                                                                               
                                                                                                                                                                                                                                                                  
                                                                                                                                                                                                                                                                  
@@ -118,9 +118,10 @@ void PrisonCell::runScenario(int& userHealth, int& userSkill)
             std::cout << "[" << i << "]" << story[plotIndex].getChoices()[i].text << std::endl;
         }
 		                                     
-       
-        std::cout << "Enter your choice: " << std::endl;
-        userInp = safeInput(0, story[plotIndex].getChoices().size()-1);
+        std::cout << "  " << std::endl;
+        std::cout << "\033[94mEnter your choice: \033[0m" << std::endl;
+        std::cout << "  " << std::endl;
+		userInp = safeInput(0, story[plotIndex].getChoices().size() - 1); //Get the user's choice and ensure it's within the valid range of choices for the current narrative point
 
 
 
@@ -138,8 +139,19 @@ void PrisonCell::runScenario(int& userHealth, int& userSkill)
             hasKey = true;
         }
 
+        if (hasKey && plotIndex == 4) {
+			std::cout << "You have the key! You can now escape the cell!" << std::endl;
+		}
+		
+
         plotIndex += 1;
-        std::cout << "=================================================== " << std::endl;
+
+        std::cout << "  " << std::endl;
+        std::cout << "\033[93m===================================================\033[0m" << std::endl;
+		std::cout << "  " << std::endl;
+
+
+        
     }
 }
  

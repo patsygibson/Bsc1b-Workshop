@@ -1,6 +1,6 @@
 #include "Courtyard.h"
 #include "NarrPoint.h"
-//#include "Weapon.h"
+#include "Weapon.h"
 
 Courtyard::Courtyard(std::string iName) : Location()
 {
@@ -62,10 +62,9 @@ void Courtyard::runScenario(int& userHealth, int& userSkill)
 {
     int plotIndex = 0;
     int userInp;
-	//Weapon weapon = Weapon("Old Rusty Sword", "An ancient sword which looks as it dates back to old Sumerian times.",);
-
+	
     //ascii art
-    std::cout << "                                                                                                                                                            " << std::endl;
+    std::cout << "\033[90m                                                                                                                                                            " << std::endl;
     std::cout << "                                                                        @                                                                                   " << std::endl;
     std::cout << "                                                                      @@@@@                                                                                 " << std::endl;
     std::cout << "                                                                        @                                                                                   " << std::endl;
@@ -105,7 +104,7 @@ void Courtyard::runScenario(int& userHealth, int& userSkill)
 	std::cout << "                                      @#        @@    @@   @    @             @@    @ @@@    @           @                                                  " << std::endl;
 	std::cout << "                                      @@        @@         @    @             @@    @        @           @                                                  " << std::endl;
 	std::cout << "                                        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                                    " << std::endl;
-    std::cout <<  "                                                                                                                                                            " << std::endl;
+    std::cout <<  "                                                                                                                                                            \033[0m" << std::endl;
   
 
 	//Main loop for the courtyard scenario
@@ -117,8 +116,10 @@ void Courtyard::runScenario(int& userHealth, int& userSkill)
 			std::cout << "[" << i << "]" << story[plotIndex].getChoices()[i].text << std::endl;  //Display the choices for the current narrative point
         }
         
-        std::cout << "Enter your choice: " << std::endl;
-        userInp = safeInput(0, story[plotIndex].getChoices().size() - 1);
+        std::cout << "  " << std::endl;
+        std::cout << "\033[94mEnter your choice: \033[0m" << std::endl;
+        std::cout << "  " << std::endl;
+		userInp = safeInput(0, story[plotIndex].getChoices().size() - 1); //Get the user's choice and ensure it's within the valid range of choices for the current narrative point
   
 		std::cout << "You chose: " << story[plotIndex].getChoices()[userInp].text << std::endl;  //Display the choice the user made
 
@@ -133,9 +134,16 @@ void Courtyard::runScenario(int& userHealth, int& userSkill)
         {
             std::cout << "You have gained the sword! +2 skill" << std::endl;
             userSkill += 2;
-			//std::cout << Weapon.getName() << ": " << Weapon.getDescription() << std::endl;
+            Weapon w = Weapon("Old Rusty Sword.", "An ancient looking sword which looks as though it dates back to antiquity times");
+            w.setEquipped(true);
+
+			std::cout << w.getName() << ": " << w.getDescription() << std::endl;
 		}
+
         plotIndex += 1;
-        std::cout << "=================================================== " << std::endl;
+
+        std::cout << "  " << std::endl;
+        std::cout << "\033[93m===================================================\033[0m" << std::endl;
+        std::cout << "  " << std::endl;
     }
 }

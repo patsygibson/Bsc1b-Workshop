@@ -45,7 +45,7 @@ int safeInput(int min, int max)
 		}
 		else
 		{
-			std::cout << "Invalid input, please enter a number between " << min << " and " << max << "." << std::endl;
+			std::cout << "\033[91m Invalid input, please enter a number between " << min << " and " << max << ".\033[0m" << std::endl;
 		}
 
 

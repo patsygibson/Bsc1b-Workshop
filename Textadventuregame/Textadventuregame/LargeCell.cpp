@@ -95,7 +95,7 @@ void LargeCell::runScenario(int& userHealth, int& userSkill)
     int userInp;
 
     // ascii art
-    std::cout << "                                                                                                                                                                 " << std::endl;
+    std::cout << "\033[90m                                                                                                                                                                 " << std::endl;
     std::cout << "                                                                                                                                                                 " << std::endl;
     std::cout << "                                            @@@@@@@@@@@@@@@@@@@@@@@@@@@@         @@@@@@@@@@@@@@@@@@@@@@@@@@@@                                                    " << std::endl;
     std::cout << "                                            @@                         @@@     @@@                         @@                                                    " << std::endl;
@@ -128,7 +128,7 @@ void LargeCell::runScenario(int& userHealth, int& userSkill)
     std::cout << "                                                     @@@@@@@@@@@@@@@@ + @@@@@@@ % @@@@@@@@@@@@@@@@                                                               " << std::endl;
     std::cout << "                                        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@      @@@      @@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                                " << std::endl;
     std::cout << "                                                                   @@@@@@@@# @@@@@@@@#                                                                           " << std::endl;
-    std::cout << "                                                                                                                                                                 " << std::endl;
+    std::cout << "                                                                                                                                                                 \033[0m" << std::endl;
 
 	//Main loop for the large cell scenario
     while (plotIndex >= 0 && plotIndex < this->story.size()) {
@@ -138,8 +138,10 @@ void LargeCell::runScenario(int& userHealth, int& userSkill)
         for (int i = 0; i < story[plotIndex].getChoices().size(); i++) {
             std::cout << "[" << i << "]" << story[plotIndex].getChoices()[i].text << std::endl;
         }
-      
-        std::cout << "Enter your choice: " << std::endl;
+
+        std::cout << "  " << std::endl;
+        std::cout << "\033[94mEnter your choice: \033[0m" << std::endl;
+        std::cout << "  " << std::endl;
         userInp = safeInput(0, story[plotIndex].getChoices().size() - 1);
 
         std::cout << "You chose: " << story[plotIndex].getChoices()[userInp].text << std::endl;
@@ -149,7 +151,11 @@ void LargeCell::runScenario(int& userHealth, int& userSkill)
         userHealth += story[plotIndex].getChoices()[userInp].healthEffect;
         userSkill += story[plotIndex].getChoices()[userInp].skillEffect;
 
+        
         plotIndex += 1;
-        std::cout << "=================================================== " << std::endl;
+
+        std::cout << "  " << std::endl;
+        std::cout << "\033[93m===================================================\033[0m" << std::endl;
+        std::cout << "  " << std::endl;
     }
 }

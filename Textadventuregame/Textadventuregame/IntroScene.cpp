@@ -32,7 +32,7 @@ void IntroScene::runScenario(int& userHealth, int& userSkill)
 
 	// ASCII art
 	std::cout << "                                                                                                                                                            " << std::endl;
-	std::cout << "=================================================================================================================================================================" << std::endl;
+	std::cout << "\033[90m=================================================================================================================================================================\033[0m" << std::endl;
 	std::cout << "                                                                                                                                                            " << std::endl;
 	std::cout << "                                                                                                                                                            " << std::endl;
 	std::cout << "\033[31m                 @@%  @@@                      @@@                                        @@  @@@@      @@                                                  " << std::endl;
@@ -48,9 +48,9 @@ void IntroScene::runScenario(int& userHealth, int& userSkill)
 	std::cout << "                                                                                                               @@@   @*                              \033[0m" << std::endl;
 	std::cout << "                                                                                                                                                            " << std::endl;
 
-	std::cout << "                               You are siting at your computer,                                                                " << std::endl;
-	std::cout << "                                                                 whiling away the hours...                                     " << std::endl;
-	std::cout << "                                                                                                                    + #########" << std::endl;
+	std::cout << "\033[95m                                  You are siting at your computer,                                                                " << std::endl;
+	std::cout << "                                                                            whiling away the hours...                          \033[0m    " << std::endl;
+	std::cout << "\033[90m                                                                                                                    + #########" << std::endl;
 	std::cout << "                                                                                                                    + #########" << std::endl;
 	std::cout << "                             ..                                                                                      +#########" << std::endl;
 	std::cout << "                            :*#**+=.                   :@@%###*************@@.                                       +#########" << std::endl;
@@ -80,31 +80,23 @@ void IntroScene::runScenario(int& userHealth, int& userSkill)
 	std::cout << "                           .-*#***#+.               %@ .@+                          @#             :@+     ..=.      +#########" << std::endl;
 	std::cout << "                                                    %@@@@+                          @@@@@@@@@@@@@@@@@+     .:=.      +#########" << std::endl;
 	std::cout << "                                                                                                           .:-.      +#########" << std::endl;
-	std::cout << "                                                                                                                     +#########" << std::endl;
+	std::cout << "                                                                                                                     +#########\033[0m" << std::endl;
 
 
 
-	std::cout << "                                 All of a sudden, your computer starts to glitch and a message appears on the screen:       " << std::endl;
+	std::cout << "\033[95m                                 All of a sudden, your computer starts to glitch and a message appears on the screen:       " << std::endl;
 	std::cout << "                                                                                                                            " << std::endl;
-	std::cout << "\033[36m                                                      'Please enter your name to continue:                            \033[0m" << std::endl;
+	std::cout << "\033[36m                                                       'Please enter your name to continue:                            \033[0m" << std::endl;
 	std::cout << "                                                                                                                            " << std::endl;
-	std::getline(std::cin, userInput);
-
-
-	std::cout << "  Welcome, " << userInput << " ! " << std::endl;
-	std::cout << "                                  " << std::endl;
+	std::cout << "                                                                                                       ";
+    std::getline(std::cin, userInput);
+	std::cout << "                                                                                                              Welcome, " << userInput << " ! " << std::endl;
+	std::cout << "                                 " << std::endl;
 	
 
-	std::cout << "\033[36m                                               Press Enter to continue...    \033[0m"                                                             << std::endl;
-	std::getline(std::cin, userInput);
-	while (!userInput.empty()) {
-		system("cls"); // Clear the console
-		std::cout << "Invalid input. Please press Enter to continue ..." << std::endl;  // Prompt the user to press Enter to continue
-		std::getline(std::cin, userInput);
-	}
-			
-	std::cout << "---------------------------------------------------------------------------------------------------------------------------------------------------------------" << std::endl;
-	system("cls"); // Clear the console
+	system("cls"); // Clear the console		
+	std::cout << "\033[93m---------------------------------------------------------------------------------------------------------------------------------------------------------------\033[0m" << std::endl;
+	std::cout << "       " << std::endl;
 	std::cout << "\033[35m                              @@@@@@@  @@@@@@    @@@@@@     @@@@@:    @@@@@@           @:    @@@=       @@        " << std::endl;
 	std::cout << "                              @        @-    @#  @    #@.  @@    @@   @@    @@       =@@@  :@+  @@    -@@@        " << std::endl;
 	std::cout << "                              @        @     @@  @     @+ @@      @@  @     @@      @@ @*  @@    @   @@ @@        " << std::endl;

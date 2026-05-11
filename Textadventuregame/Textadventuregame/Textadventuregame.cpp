@@ -21,13 +21,29 @@ int main()
     CrumblingCell CCell = CrumblingCell("\033[93m   The cell is crumbling...   \033[0m");
 
 	std::vector<Location*> chapters = { &Intro, &Prison, &Courtyd, &LCell, &CCell }; // Store the locations in a vector for easy access
-
+    //Maybe add struct??
     int chapIndex = 0;
     int userHealth = 10;
     int userSkill = 10;
 
+    /*
+    int age = 100;
+	int* agePtr = &age;
+
+	agePtr = agePtr + 1;
+    std::cout << agePtr << std::endl;
+    
+
+    int* chapIndexPtr = &chapIndex;
+
+    std::cout << *chapIndexPtr << std::endl;
+   
+*/
+	
+
     while (chapIndex < chapters.size())
     {
+        
         std::cout << chapters[chapIndex]->getName() << std::endl;
 
         chapters[chapIndex]->runScenario(userHealth, userSkill);

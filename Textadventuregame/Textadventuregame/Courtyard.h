@@ -4,8 +4,6 @@
 
 #include "Location.h"
 
-int safeInput(int min, int max);
-
 class Courtyard : public Location
 {
 private:

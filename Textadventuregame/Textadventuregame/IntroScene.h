@@ -4,7 +4,6 @@
 
 #include "Location.h"
 
-int safeInput(int min, int max);
 
 class IntroScene : public Location
 {

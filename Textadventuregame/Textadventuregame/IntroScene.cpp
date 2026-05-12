@@ -10,8 +10,6 @@ IntroScene::IntroScene(std::string iName) : Location()
 
 }
 
-
-
 void IntroScene::setName(std::string nName)
 {
 	this->name = nName;
@@ -29,6 +27,8 @@ void IntroScene::runScenario(int& userHealth, int& userSkill)
 	std::string userInput;
 	std::string getline;
 	int plotIndex = 0;  //This variable is used to keep track of the player's progress through the story
+
+
 
 	// ASCII art
 	std::cout << "                                                                                                                                                            " << std::endl;
@@ -93,8 +93,7 @@ void IntroScene::runScenario(int& userHealth, int& userSkill)
 	std::cout << "                                                                                                              Welcome, " << userInput << " ! " << std::endl;
 	std::cout << "                                 " << std::endl;
 	
-
-	system("cls"); // Clear the console		
+	
 	std::cout << "\033[93m---------------------------------------------------------------------------------------------------------------------------------------------------------------\033[0m" << std::endl;
 	std::cout << "       " << std::endl;
 	std::cout << "\033[35m                              @@@@@@@  @@@@@@    @@@@@@     @@@@@:    @@@@@@           @:    @@@=       @@        " << std::endl;

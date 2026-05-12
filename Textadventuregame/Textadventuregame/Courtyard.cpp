@@ -8,17 +8,17 @@ Courtyard::Courtyard(std::string iName) : Location()
 	//Narrative points and choices for the courtyard location   
     NarrPoint first = NarrPoint("You both walk outside into the courtyard...", "All of sudden a guard is stood in front of you! 'Stab him!' the stranger orders you, 'Do it now!', will you obey the stranger's orders?");
     Choice firstChoice = Choice{ "Yes", "You succesfully stab the guard 'My, my, I'm impressed... Hermann' he smirks... But your name is not Hermanm...", 0, 1 };
-    Choice secondChoice = Choice{ "No", "'You idiot!' the stranger casts some sort of strange spell on the guard which makes him freeze and vanish into thin air. This shocks you as you begin to realise this stranger is not just an ordinary person... but something entirely different... not human. ", 1, 0 };
+    Choice secondChoice = Choice{ "No", "'You idiot!' the stranger casts some sort of strange spell on the guard which makes him freeze and vanish into thin air. This shocks you as you begin to realise this stranger is not just an ordinary person... but something entirely different... not human. ", -1, 0 };
     first.addChoice(firstChoice);
     first.addChoice(secondChoice);
 
-    NarrPoint second = NarrPoint("Something feels eery as though everything was stopped in time and the stranger says 'I thought I got all of them before you arrived but I guess that was a test of your strength'", "He looks at you 'My name is something you may not be able to pronounce but you can call me Ludovic.");
+    NarrPoint second = NarrPoint("Something feels eery... Like everything has stopped in time and the stranger says 'I thought I got all of them before you arrived but I guess that was a test of your strength'", "He looks at you 'My name is something you may not be able to pronounce but you can call me Ludovic.");
     Choice thirdChoice = Choice{ "What's your real name?", "'Curious are we?' He pauses 'You don't need to know though'. The hair on the back of your neck start to rise.", 2, 0 };
     Choice fourthChoice = Choice{ "Cool name", "'Still quite the character that used to be' You wonder what he means by that... It's as though he knows you but you don't know what he is.", 1, 1 };
     second.addChoice(thirdChoice);
     second.addChoice(fourthChoice);
 
-    NarrPoint third = NarrPoint("You wonder what he meant by his name is something you won't be able pronunce. Perhaps he's foreign?", "Do you decide to ask him?");
+    NarrPoint third = NarrPoint("You wonder what he meant by his name is something you won't be able pronounce. Perhaps he's foreign?", "Do you decide to ask him?");
     Choice fifthChoice = Choice{ "Yes", "'You have been here before... We have met before... Hermann.' He walks as though he has practiced this 'Let me tell you story...'", 0, 1 };
     Choice sixthChoice = Choice{ "No", "You say nothing and you continue on your journey with this strange individual who will hopefully tell you that this is all but a lucid dream.", 1, 0 };
     third.addChoice(fifthChoice);
@@ -37,6 +37,10 @@ Courtyard::Courtyard(std::string iName) : Location()
 	fifth.addChoice(ninthChoice);
 	fifth.addChoice(tenthChoice);
     fifth.addChoice(eleventhChoice);
+
+    NarrPoint sixth = NarrPoint("Transitioning to next chapter...", "Press 0 to continue");
+    Choice twelfthChoice = Choice{ "Let's go.", " ", 0, 0 };
+    sixth.addChoice(twelfthChoice);
    
 	//Adding the narrative points to the story vector
 	this->story.push_back(first);
@@ -44,7 +48,7 @@ Courtyard::Courtyard(std::string iName) : Location()
 	this->story.push_back(third);
 	this->story.push_back(fourth);
 	this->story.push_back(fifth);
-
+    this->story.push_back(sixth);
 }
 
 void Courtyard::setName(std::string nName)
@@ -110,7 +114,9 @@ void Courtyard::runScenario(int& userHealth, int& userSkill)
 	//Main loop for the courtyard scenario
     while (plotIndex >= 0 && plotIndex < this->story.size()) {
         std::cout << story[plotIndex].getPlot() << std::endl;
+        std::cout << "  " << std::endl;
         std::cout << story[plotIndex].getQuestion() << std::endl;
+        std::cout << "  " << std::endl;
 
         for (int i = 0; i < story[plotIndex].getChoices().size(); i++) {
 			std::cout << "[" << i << "]" << story[plotIndex].getChoices()[i].text << std::endl;  //Display the choices for the current narrative point
@@ -120,8 +126,13 @@ void Courtyard::runScenario(int& userHealth, int& userSkill)
         std::cout << "\033[94mEnter your choice: \033[0m" << std::endl;
         std::cout << "  " << std::endl;
 		userInp = safeInput(0, story[plotIndex].getChoices().size() - 1); //Get the user's choice and ensure it's within the valid range of choices for the current narrative point
-  
+        std::cout << "  " << std::endl;
+        std::cout << "\033[93m===================================================\033[0m" << std::endl;
+        std::cout << "  " << std::endl;
+
 		std::cout << "You chose: " << story[plotIndex].getChoices()[userInp].text << std::endl;  //Display the choice the user made
+        std::cout << story[plotIndex].getChoices()[userInp].outcome << std::endl;
+        std::cout << "  " << std::endl;
 
         std::cout << story[plotIndex].getChoices()[userInp].healthEffect << " health" << std::endl;
         std::cout << story[plotIndex].getChoices()[userInp].skillEffect << " skill" << std::endl;
@@ -141,9 +152,5 @@ void Courtyard::runScenario(int& userHealth, int& userSkill)
 		}
 
         plotIndex += 1;
-
-        std::cout << "  " << std::endl;
-        std::cout << "\033[93m===================================================\033[0m" << std::endl;
-        std::cout << "  " << std::endl;
     }
 }

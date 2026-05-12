@@ -14,14 +14,14 @@ PrisonCell::PrisonCell(std::string iName) : Location()
 
 
     NarrPoint second = NarrPoint("'You are in a Catholic Benedictine Monastery prison cell, located in Podlazice, Bohemia to be exact.' ", "    Can you guess the year?");
-    Choice thirdChoice = Choice{ "550BC","Catholicism wasn't around then... 'Your brain is still a little foggy I see and you can't remember stuff but don't worry I'm a patient man' He says as he slowly approaches the cell door'", 0, 0};
-    Choice fourthChoice = Choice{ "1221", "You chose the right answer but you feel tired", -1, 1};
+    Choice thirdChoice = Choice{ "550BC","Catholicism wasn't around then... 'Your brain is still a little foggy I see and you can't remember stuff but don't worry I'm a patient man' He says as he slowly approaches the cell door'", 0, -1};
+    Choice fourthChoice = Choice{ "1221", "You chose the right answer. Well done.", 0, 1};
     second.addChoice(thirdChoice);
     second.addChoice(fourthChoice);
 
     NarrPoint third = NarrPoint("You look at the prison cell door, it is old and rusty.", "Would you like to attempt in opening it? ");
-    Choice fifthChoice = Choice{ "Yes!", "You try to open the door but it won't budge, it's locked tight. The stranger chuckles 'You won't be able to get out that easily.' You don't have enough strength nor do you have key! But you do feel your strength slowly coming back.", 1, -1};
-    Choice sixthChoice = Choice{ "Nah. why bother!","You simply stand there awkwardly and you wait for the stranger to speak again. But he doesn't.", 0, 0};
+    Choice fifthChoice = Choice{ "Yes!", "You try to open the door but it won't budge, it's locked tight. The stranger chuckles 'You won't be able to get out that easily.' You don't have enough strength nor do you have the key! But you do feel your strength slowly coming back.", 1, 0};
+    Choice sixthChoice = Choice{ "Nah. why bother!","You simply stand there awkwardly and you wait for the stranger to speak again. But he doesn't.", -1, 0};
     third.addChoice(fifthChoice);
     third.addChoice(sixthChoice);
 
@@ -32,16 +32,20 @@ PrisonCell::PrisonCell(std::string iName) : Location()
     fourth.addChoice(eighthChoice);
 
     NarrPoint fifth = NarrPoint(" 'I can tell you exactly everything but first you must work with me' He says.  You have a choice to make.", "Will you choose to cooperate with the stranger or not? ");
-    Choice ninthChoice = Choice{ "Okay...", "You get given a key by the stranger. ", - 1 , 1};
+    Choice ninthChoice = Choice{ "Okay...", "You get given a key by the stranger. ", 0 , 1};
     Choice tenthChoice = Choice{ "Hell no.", "'Why not?' I can give you this key. He tosses the key at you.", 1, -1};
     fifth.addChoice(ninthChoice);
     fifth.addChoice(tenthChoice);
 
     NarrPoint sixth = NarrPoint("You can now escape the cell", "Will you choose to escape or not? ");
-    Choice eleventhChoice = Choice{ "Let's go."," ", 0, 0};
-    Choice twelfthChoice = Choice{ "Um... I'll stay.", " You stay a little longer until eventually you can.", 0, 0};
+    Choice eleventhChoice = Choice{ "Let's go."," 'Good' he says. ", 0, 0};
+    Choice twelfthChoice = Choice{ "Um... I'll stay.", " 'I'm sorry but you haven't a choice in this matter' he says.", 0, 0};
     sixth.addChoice(eleventhChoice);
     sixth.addChoice(twelfthChoice);
+
+    NarrPoint seventh = NarrPoint("Transitioning to next chapter...", "Press 0 to continue");
+    Choice thirteenthChoice = Choice{ "Let's go.", " ", 0, 0 };
+    seventh.addChoice(thirteenthChoice);
 
 	this->story.push_back(first);
 	this->story.push_back(second);
@@ -49,6 +53,8 @@ PrisonCell::PrisonCell(std::string iName) : Location()
 	this->story.push_back(fourth);
 	this->story.push_back(fifth);
 	this->story.push_back(sixth);
+    this->story.push_back(seventh);
+
 }
 
 void PrisonCell::setName(std::string nName)
@@ -112,7 +118,9 @@ void PrisonCell::runScenario(int& userHealth, int& userSkill)
 
     while (plotIndex >= 0 && plotIndex < this->story.size()) {
         std::cout << story[plotIndex].getPlot() << std::endl;
+        std::cout << "  " << std::endl;
         std::cout << story[plotIndex].getQuestion() << std::endl;
+        std::cout << "  " << std::endl; 
 
         for (int i = 0; i < story[plotIndex].getChoices().size(); i++) {
             std::cout << "[" << i << "]" << story[plotIndex].getChoices()[i].text << std::endl;
@@ -123,12 +131,15 @@ void PrisonCell::runScenario(int& userHealth, int& userSkill)
         std::cout << "  " << std::endl;
 		userInp = safeInput(0, story[plotIndex].getChoices().size() - 1); //Get the user's choice and ensure it's within the valid range of choices for the current narrative point
 
-
+        std::cout << "  " << std::endl;
+        std::cout << "\033[93m===================================================\033[0m" << std::endl;
+        std::cout << "  " << std::endl;
 
 
         std::cout << "You chose: " << story[plotIndex].getChoices()[userInp].text << std::endl;
         std::cout << story[plotIndex].getChoices()[userInp].outcome << std::endl;
-
+        std::cout << "  " << std::endl;
+        
 
         std::cout << story[plotIndex].getChoices()[userInp].healthEffect << " health" << std::endl;
         std::cout << story[plotIndex].getChoices()[userInp].skillEffect << " skill" << std::endl;
@@ -143,15 +154,8 @@ void PrisonCell::runScenario(int& userHealth, int& userSkill)
 			std::cout << "You have the key! You can now escape the cell!" << std::endl;
 		}
 		
-
         plotIndex += 1;
 
-        std::cout << "  " << std::endl;
-        std::cout << "\033[93m===================================================\033[0m" << std::endl;
-		std::cout << "  " << std::endl;
-
-
-        
     }
 }
  

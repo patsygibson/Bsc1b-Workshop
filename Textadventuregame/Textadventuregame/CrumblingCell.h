@@ -1,7 +1,7 @@
 #pragma once
 #include "Location.h"
 
-int safeInput(int min, int max);
+
 
 class CrumblingCell : public Location
 {

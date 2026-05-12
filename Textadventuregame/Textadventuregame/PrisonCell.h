@@ -4,8 +4,11 @@
 
 #include "Location.h"
 
+
+
 class PrisonCell : public Location
 {
+
 private:
 
 public:
@@ -15,5 +18,5 @@ public:
 	
 	void runScenario(int& userHealth, int& userSkill) override;
 };
-int safeInput(int min, int max);
+
 

@@ -1,66 +1,70 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\",
+  "WorkspaceRootPath": "D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\CrumblingCell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|solutionrelative:Textadventuregame\\CrumblingCell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Textadventuregame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|solutionrelative:Textadventuregame\\Textadventuregame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\IntroScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|solutionrelative:Textadventuregame\\IntroScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\NarrPoint.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|solutionrelative:Textadventuregame\\NarrPoint.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\LargeCell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|solutionrelative:Textadventuregame\\LargeCell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Courtyard.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|solutionrelative:Textadventuregame\\Courtyard.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\PrisonCell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|solutionrelative:Textadventuregame\\PrisonCell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Location.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|solutionrelative:Textadventuregame\\Location.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Weapon.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|solutionrelative:Textadventuregame\\Weapon.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Weapon.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|solutionrelative:Textadventuregame\\Weapon.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\IntroScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|solutionrelative:Textadventuregame\\IntroScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Location.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Location.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|solutionrelative:Textadventuregame\\Location.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Courtyard.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\PrisonCell.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|solutionrelative:Textadventuregame\\PrisonCell.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Courtyard.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|solutionrelative:Textadventuregame\\Courtyard.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\CrumblingCell.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\CrumblingCell.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|solutionrelative:Textadventuregame\\CrumblingCell.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\LargeCell.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\IntroScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|solutionrelative:Textadventuregame\\IntroScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\LargeCell.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|solutionrelative:Textadventuregame\\LargeCell.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\LargeCell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|solutionrelative:Textadventuregame\\LargeCell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Location.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|solutionrelative:Textadventuregame\\Location.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\CrumblingCell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|solutionrelative:Textadventuregame\\CrumblingCell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\NarrPoint.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|solutionrelative:Textadventuregame\\NarrPoint.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Weapon.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|solutionrelative:Textadventuregame\\Weapon.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\PrisonCell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|solutionrelative:Textadventuregame\\PrisonCell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Textadventuregame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|solutionrelative:Textadventuregame\\Textadventuregame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Courtyard.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|solutionrelative:Textadventuregame\\Courtyard.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Weapon.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|solutionrelative:Textadventuregame\\Weapon.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\IntroScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{103579EC-1B88-4227-BBE7-AE8FBD5B687A}|Textadventuregame\\Textadventuregame.vcxproj|solutionrelative:Textadventuregame\\IntroScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,15 +74,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "PrisonCell.h",
+              "DocumentMoniker": "D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\PrisonCell.h",
+              "RelativeDocumentMoniker": "Textadventuregame\\PrisonCell.h",
+              "ToolTip": "D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\PrisonCell.h",
+              "RelativeToolTip": "Textadventuregame\\PrisonCell.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-12T15:05:26.169Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "NarrPoint.cpp",
-              "DocumentMoniker": "D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\NarrPoint.cpp",
+              "DocumentMoniker": "D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\NarrPoint.cpp",
               "RelativeDocumentMoniker": "Textadventuregame\\NarrPoint.cpp",
-              "ToolTip": "D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\NarrPoint.cpp",
+              "ToolTip": "D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\NarrPoint.cpp",
               "RelativeToolTip": "Textadventuregame\\NarrPoint.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
@@ -87,63 +108,63 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "LargeCell.cpp",
-              "DocumentMoniker": "D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\LargeCell.cpp",
+              "DocumentMoniker": "D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\LargeCell.cpp",
               "RelativeDocumentMoniker": "Textadventuregame\\LargeCell.cpp",
-              "ToolTip": "D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\LargeCell.cpp",
+              "ToolTip": "D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\LargeCell.cpp",
               "RelativeToolTip": "Textadventuregame\\LargeCell.cpp",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAAAI8AAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAAAKEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-05-01T13:46:44.284Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "CrumblingCell.cpp",
-              "DocumentMoniker": "D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\CrumblingCell.cpp",
+              "DocumentMoniker": "D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\CrumblingCell.cpp",
               "RelativeDocumentMoniker": "Textadventuregame\\CrumblingCell.cpp",
-              "ToolTip": "D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\CrumblingCell.cpp",
+              "ToolTip": "D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\CrumblingCell.cpp",
               "RelativeToolTip": "Textadventuregame\\CrumblingCell.cpp",
-              "ViewState": "AgIAAHQAAAAAAAAAAAAnwH8AAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAAAIAAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-04-30T19:27:58.12Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 13,
               "Title": "Courtyard.cpp",
-              "DocumentMoniker": "D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Courtyard.cpp",
+              "DocumentMoniker": "D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Courtyard.cpp",
               "RelativeDocumentMoniker": "Textadventuregame\\Courtyard.cpp",
-              "ToolTip": "D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Courtyard.cpp",
+              "ToolTip": "D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Courtyard.cpp",
               "RelativeToolTip": "Textadventuregame\\Courtyard.cpp",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAAHgAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAAAHgAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-04-24T14:15:29.392Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 0,
               "Title": "Location.h",
-              "DocumentMoniker": "D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Location.h",
+              "DocumentMoniker": "D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Location.h",
               "RelativeDocumentMoniker": "Textadventuregame\\Location.h",
-              "ToolTip": "D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Location.h",
+              "ToolTip": "D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Location.h",
               "RelativeToolTip": "Textadventuregame\\Location.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-04-30T18:10:50.42Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "Weapon.h",
-              "DocumentMoniker": "D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Weapon.h",
+              "DocumentMoniker": "D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Weapon.h",
               "RelativeDocumentMoniker": "Textadventuregame\\Weapon.h",
-              "ToolTip": "D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Weapon.h",
+              "ToolTip": "D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Weapon.h",
               "RelativeToolTip": "Textadventuregame\\Weapon.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
@@ -152,11 +173,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Weapon.cpp",
-              "DocumentMoniker": "D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Weapon.cpp",
+              "DocumentMoniker": "D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Weapon.cpp",
               "RelativeDocumentMoniker": "Textadventuregame\\Weapon.cpp",
-              "ToolTip": "D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Weapon.cpp",
+              "ToolTip": "D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Weapon.cpp",
               "RelativeToolTip": "Textadventuregame\\Weapon.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
@@ -167,9 +188,9 @@
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "Location.cpp",
-              "DocumentMoniker": "D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Location.cpp",
+              "DocumentMoniker": "D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Location.cpp",
               "RelativeDocumentMoniker": "Textadventuregame\\Location.cpp",
-              "ToolTip": "D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Location.cpp",
+              "ToolTip": "D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Location.cpp",
               "RelativeToolTip": "Textadventuregame\\Location.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
@@ -178,89 +199,91 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "PrisonCell.cpp",
-              "DocumentMoniker": "D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\PrisonCell.cpp",
+              "DocumentMoniker": "D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\PrisonCell.cpp",
               "RelativeDocumentMoniker": "Textadventuregame\\PrisonCell.cpp",
-              "ToolTip": "D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\PrisonCell.cpp",
+              "ToolTip": "D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\PrisonCell.cpp",
               "RelativeToolTip": "Textadventuregame\\PrisonCell.cpp",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAAHoAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAAJkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-04-27T14:25:27.118Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 4,
               "Title": "IntroScene.h",
-              "DocumentMoniker": "D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\IntroScene.h",
+              "DocumentMoniker": "D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\IntroScene.h",
               "RelativeDocumentMoniker": "Textadventuregame\\IntroScene.h",
-              "ToolTip": "D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\IntroScene.h",
+              "ToolTip": "D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\IntroScene.h",
               "RelativeToolTip": "Textadventuregame\\IntroScene.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-04-24T13:23:13.143Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 15,
               "Title": "IntroScene.cpp",
-              "DocumentMoniker": "D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\IntroScene.cpp",
+              "DocumentMoniker": "D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\IntroScene.cpp",
               "RelativeDocumentMoniker": "Textadventuregame\\IntroScene.cpp",
-              "ToolTip": "D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\IntroScene.cpp",
+              "ToolTip": "D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\IntroScene.cpp",
               "RelativeToolTip": "Textadventuregame\\IntroScene.cpp",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAAHEAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAHEAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-04-23T13:11:46.605Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 2,
               "Title": "Courtyard.h",
-              "DocumentMoniker": "D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Courtyard.h",
+              "DocumentMoniker": "D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Courtyard.h",
               "RelativeDocumentMoniker": "Textadventuregame\\Courtyard.h",
-              "ToolTip": "D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Courtyard.h",
+              "ToolTip": "D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Courtyard.h",
               "RelativeToolTip": "Textadventuregame\\Courtyard.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-04-24T13:22:58.871Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 3,
               "Title": "CrumblingCell.h",
-              "DocumentMoniker": "D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\CrumblingCell.h",
+              "DocumentMoniker": "D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\CrumblingCell.h",
               "RelativeDocumentMoniker": "Textadventuregame\\CrumblingCell.h",
-              "ToolTip": "D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\CrumblingCell.h",
+              "ToolTip": "D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\CrumblingCell.h",
               "RelativeToolTip": "Textadventuregame\\CrumblingCell.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-24T13:15:18.94Z"
+              "WhenOpened": "2026-04-24T13:15:18.94Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 5,
               "Title": "LargeCell.h",
-              "DocumentMoniker": "D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\LargeCell.h",
+              "DocumentMoniker": "D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\LargeCell.h",
               "RelativeDocumentMoniker": "Textadventuregame\\LargeCell.h",
-              "ToolTip": "D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\LargeCell.h",
+              "ToolTip": "D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\LargeCell.h",
               "RelativeToolTip": "Textadventuregame\\LargeCell.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-24T13:13:50.1Z"
+              "WhenOpened": "2026-04-24T13:13:50.1Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 12,
               "Title": "Textadventuregame.cpp",
-              "DocumentMoniker": "D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Textadventuregame.cpp",
+              "DocumentMoniker": "D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Textadventuregame.cpp",
               "RelativeDocumentMoniker": "Textadventuregame\\Textadventuregame.cpp",
-              "ToolTip": "D:\\2501023PatsyGibson\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Textadventuregame.cpp",
+              "ToolTip": "D:\\PatsyGibson2501023\\Intro-to-Unreal\\Bsc1b-Workshop\\Textadventuregame\\Textadventuregame\\Textadventuregame.cpp",
               "RelativeToolTip": "Textadventuregame\\Textadventuregame.cpp",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAnwBsAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAnwD0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-04-24T12:52:49.358Z",
               "EditorCaption": ""

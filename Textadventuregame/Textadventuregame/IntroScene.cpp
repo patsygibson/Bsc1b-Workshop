@@ -90,6 +90,10 @@ void IntroScene::runScenario(int& userHealth, int& userSkill)
 	std::cout << "                                                                                                                            " << std::endl;
 	std::cout << "                                                                                                       ";
     std::getline(std::cin, userInput);
+	while (userInput.empty()) {
+		std::cout << "Invalid input. Please press Enter to continue ..." << std::endl;  // Prompt the user to press Enter to continue
+		std::getline(std::cin, userInput);
+	}
 	std::cout << "                                                                                                              Welcome, " << userInput << " ! " << std::endl;
 	std::cout << "                                 " << std::endl;
 	

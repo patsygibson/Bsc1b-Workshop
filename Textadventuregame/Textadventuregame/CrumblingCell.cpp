@@ -144,7 +144,7 @@ void CrumblingCell::runScenario(int& userHealth, int& userSkill)
 
         if (plotIndex == 0)
         {
-            std::cout << "You take the sword you have equipped and you point it at him threatingly. " << std::endl;
+            std::cout << "You take the sword you have equipped and you point it at him threateningly. " << std::endl;
             Weapon w = Weapon(" This sword is now broken", "It falls to dust and crumbles in your hand.");
             bool setEquipped(false);
             std::cout << w.getName() << " " << w.getDescription();

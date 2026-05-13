@@ -34,10 +34,7 @@ int main()
         std::cout << "\033[32m                                                           Press Enter to continue...    \033[0m" << std::endl;
         std::getline(std::cin, userInput);
 
-        while (!userInput.empty()) {
-            std::cout << "Invalid input. Please press Enter to continue ..." << std::endl;  // Prompt the user to press Enter to continue
-            std::getline(std::cin, userInput);
-        }
+
 		system("cls"); // Clear the console before starting the next chapter
 
 

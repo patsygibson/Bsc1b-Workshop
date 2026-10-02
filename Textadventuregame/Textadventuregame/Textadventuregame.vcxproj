@@ -131,6 +131,7 @@
     <ClCompile Include="NarrPoint.cpp" />
     <ClCompile Include="PrisonCell.cpp" />
     <ClCompile Include="Textadventuregame.cpp" />
+    <ClCompile Include="Weapon.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Courtyard.h" />
@@ -140,6 +141,7 @@
     <ClInclude Include="Location.h" />
     <ClInclude Include="NarrPoint.h" />
     <ClInclude Include="PrisonCell.h" />
+    <ClInclude Include="Weapon.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

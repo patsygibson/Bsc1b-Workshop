@@ -1,24 +1,24 @@
 #include "Courtyard.h"
 #include "NarrPoint.h"
+#include "Weapon.h"
 
 Courtyard::Courtyard(std::string iName) : Location()
 {
-	this->name = iName;       
-
-	//Narrative points and choices for the courtyard location   
+    this->name = iName;
+    //Narrative points and choices for the courtyard location   
     NarrPoint first = NarrPoint("You both walk outside into the courtyard...", "All of sudden a guard is stood in front of you! 'Stab him!' the stranger orders you, 'Do it now!', will you obey the stranger's orders?");
     Choice firstChoice = Choice{ "Yes", "You succesfully stab the guard 'My, my, I'm impressed... Hermann' he smirks... But your name is not Hermanm...", 0, 1 };
-    Choice secondChoice = Choice{ "No", "'You idiot!' the stranger casts some sort of strange spell on the guard which makes him freeze and vanish into thin air. This shocks you as you begin to realise this stranger is not just an ordinary person... but something entirely different... not human. ", 1, 0 };
+    Choice secondChoice = Choice{ "No", "'You idiot!' the stranger casts some sort of strange spell on the guard which makes him freeze and vanish into thin air. This shocks you as you begin to realise this stranger is not just an ordinary person... but something entirely different... not human. ", -1, 0 };
     first.addChoice(firstChoice);
     first.addChoice(secondChoice);
 
-    NarrPoint second = NarrPoint("Something feels eery as though everything was stopped in time and the stranger says 'I thought I got all of them before you arrived but I guess that was a test of your strength'", "He looks at you 'My name is something you may not be able to pronounce but you can call me Ludovic.");
+    NarrPoint second = NarrPoint("Something feels eery... Like everything has stopped in time and the stranger says 'I thought I got all of them before you arrived but I guess that was a test of your strength'", "He looks at you 'My name is something you may not be able to pronounce but you can call me Ludovic.");
     Choice thirdChoice = Choice{ "What's your real name?", "'Curious are we?' He pauses 'You don't need to know though'. The hair on the back of your neck start to rise.", 2, 0 };
     Choice fourthChoice = Choice{ "Cool name", "'Still quite the character that used to be' You wonder what he means by that... It's as though he knows you but you don't know what he is.", 1, 1 };
     second.addChoice(thirdChoice);
     second.addChoice(fourthChoice);
 
-    NarrPoint third = NarrPoint("You wonder what he meant by that.", "Do you decide to ask him what he meant by that?");
+    NarrPoint third = NarrPoint("You wonder what he meant by his name is something you won't be able pronounce. Perhaps he's foreign?", "Do you decide to ask him?");
     Choice fifthChoice = Choice{ "Yes", "'You have been here before... We have met before... Hermann.' He walks as though he has practiced this 'Let me tell you story...'", 0, 1 };
     Choice sixthChoice = Choice{ "No", "You say nothing and you continue on your journey with this strange individual who will hopefully tell you that this is all but a lucid dream.", 1, 0 };
     third.addChoice(fifthChoice);
@@ -34,31 +34,31 @@ Courtyard::Courtyard(std::string iName) : Location()
     Choice ninthChoice = Choice{ "What deal?", "    ", 0, 1 };
     Choice tenthChoice = Choice{ "What do you want?", "    ", 1, 0 };
     Choice eleventhChoice = Choice{ "Is this a dream?", "THIS IS NOT A DREAM!", 0, -2 };
-	fifth.addChoice(ninthChoice);
-	fifth.addChoice(tenthChoice);
+    fifth.addChoice(ninthChoice);
+    fifth.addChoice(tenthChoice);
     fifth.addChoice(eleventhChoice);
-   
-	//Adding the narrative points to the story vector
-	this->story.push_back(first);
-	this->story.push_back(second);
-	this->story.push_back(third);
-	this->story.push_back(fourth);
-	this->story.push_back(fifth);
 
+    NarrPoint sixth = NarrPoint("Transitioning to next chapter...", "Press 0 to continue");
+    Choice twelfthChoice = Choice{ "Let's go.", " ", 0, 0 };
+    sixth.addChoice(twelfthChoice);
 
-
-
-
+    //Adding the narrative points to the story vector
+    this->story.push_back(first);
+    this->story.push_back(second);
+    this->story.push_back(third);
+    this->story.push_back(fourth);
+    this->story.push_back(fifth);
+    this->story.push_back(sixth);
 }
 
 void Courtyard::setName(std::string nName)
 {
-	this->name = nName;
+    this->name = nName;
 }
 
 std::string Courtyard::getName()
 {
-	return this->name;
+    return this->name;
 }
 
 
@@ -68,63 +68,89 @@ void Courtyard::runScenario(int& userHealth, int& userSkill)
     int userInp;
 
     //ascii art
-    std::cout << "                                                                                                                                                            " << std::endl;
+    std::cout << "\033[90m                                                                                                                                                            " << std::endl;
     std::cout << "                                                                        @                                                                                   " << std::endl;
     std::cout << "                                                                      @@@@@                                                                                 " << std::endl;
     std::cout << "                                                                        @                                                                                   " << std::endl;
     std::cout << "                                                                   @@@@@@@@@@@-                                                                             " << std::endl;
-	std::cout << "                                                                @@@            @@                                                                           " << std::endl;
-	std::cout << "                                                              @@                 @@                                                                         " << std::endl;
-	std::cout << "                                                            @@                     @@                                                                       " << std::endl;
-	std::cout << "                                                            @@       @@@%@@@@       @                                                                       " << std::endl;
-	std::cout << "                                                          @@  @@@@@@@   @%   @@@  @@@@@@                                                                    " << std::endl;
-	std::cout << "                                                         @  @@-      @@    @@@         @@                                                                   " << std::endl;
+    std::cout << "                                                                @@@            @@                                                                           " << std::endl;
+    std::cout << "                                                              @@                 @@                                                                         " << std::endl;
+    std::cout << "                                                            @@                     @@                                                                       " << std::endl;
+    std::cout << "                                                            @@       @@@%@@@@       @                                                                       " << std::endl;
+    std::cout << "                                                          @@  @@@@@@@   @%   @@@  @@@@@@                                                                    " << std::endl;
+    std::cout << "                                                         @  @@-      @@    @@@         @@                                                                   " << std::endl;
     std::cout << "                                                      @@@@@=   @@@@@@         @@@@@@@@@@ @@+                                                                " << std::endl;
     std::cout << "                                                      @@@@              @@              @+@@                                                                " << std::endl;
     std::cout << "                                                         @  @@@@-     @@  @@       @@@@  @                                                                  " << std::endl;
-	std::cout << "                                                         @  @   @     @    @      @@  @  @                                                                  " << std::endl;
     std::cout << "                                                         @  @   @     @    @      @@  @  @                                                                  " << std::endl;
-	std::cout << "                                                       @  @   @  @@@@@@@ % @@@@@  @@  @  @                                                                  " << std::endl;
-	std::cout << "                                                         @  @ = @@#  #@@@@@@@@   @@@  @  @                                                                  " << std::endl;
-	std::cout << "                                                     @@@@@@@@@   @@           @@@  @@@@@@@@@@                                                               " << std::endl;
-	std::cout << "                                                     @     @  @@   @@@@@@@@@@@   @@  @@    @@                                                               " << std::endl;
-	std::cout << "                                           @@@@@@@@@@@@@@@@ @@  @@@     @     @@@  @@ @@@@@@@@@@@@@@@                                                       " << std::endl;
-	std::cout << "                                          @@            @@ @@ @@       @@@       @# @@  @            @                                                      " << std::endl;
-	std::cout << "                                         @@            :@ @@ @@       @   @       @@ @@ @@            @                                                     " << std::endl;
-	std::cout << "                                        @             @ * @ @@         @@@         @@ @  @            @@                                                    " << std::endl;
-	std::cout << "                                       @         @@@@@@@@@@@                        @@@@@@@@@@          @@                                                  " << std::endl;
-	std::cout << "                                      @          @         @                        @        @           @@                                                 " << std::endl;
-	std::cout << "                                    @@@@@@@@@@@@@@         @    @@@@@@@@@@@@@@@@    @        @@@@@@@@@@@@@                                                  " << std::endl;
-	std::cout << "                                      @         @@ @@@     @    @             @@    @   @@@  @           @                                                  " << std::endl;
-	std::cout << "                                      @ - @@    @@         @    @             @@    @        @         @@@                                                  " << std::endl;
-	std::cout << "                                      @         @@         @    @             @@    @        @           @                                                  " << std::endl;
-	std::cout << "                                      @#        @@    @@   @    @             @@    @ @@@    @           @                                                  " << std::endl;
-	std::cout << "                                      @#    @@@ @@         @    @             @@    @        @ @@@       @                                                  " << std::endl;
-	std::cout << "                                      @#        @@         @    @             @@    @        @           @                                                  " << std::endl;
-	std::cout << "                                      @#        @@ @@@     @    @             @@    @    @@@ @           @                                                  " << std::endl;
-	std::cout << "                                      @         @@         @    @             @@    @        @           @                                                  " << std::endl;
-	std::cout << "                                      @ = @@@   @@         @    @             @@    @        @           @                                                  " << std::endl;
-	std::cout << "                                      @         @@         @    @             @@    @        @           @                                                  " << std::endl;
-	std::cout << "                                      @#        @@    @@   @    @             @@    @ @@@    @           @                                                  " << std::endl;
-	std::cout << "                                      @@        @@         @    @             @@    @        @           @                                                  " << std::endl;
-	std::cout << "                                        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                                    " << std::endl;
-    std::cout <<  "                                                                                                                                                            " << std::endl;
-  
+    std::cout << "                                                         @  @   @     @    @      @@  @  @                                                                  " << std::endl;
+    std::cout << "                                                       @  @   @  @@@@@@@ % @@@@@  @@  @  @                                                                  " << std::endl;
+    std::cout << "                                                         @  @ = @@#  #@@@@@@@@   @@@  @  @                                                                  " << std::endl;
+    std::cout << "                                                     @@@@@@@@@   @@           @@@  @@@@@@@@@@                                                               " << std::endl;
+    std::cout << "                                                     @     @  @@   @@@@@@@@@@@   @@  @@    @@                                                               " << std::endl;
+    std::cout << "                                           @@@@@@@@@@@@@@@@ @@  @@@     @     @@@  @@ @@@@@@@@@@@@@@@                                                       " << std::endl;
+    std::cout << "                                          @@            @@ @@ @@       @@@       @# @@  @            @                                                      " << std::endl;
+    std::cout << "                                         @@            :@ @@ @@       @   @       @@ @@ @@            @                                                     " << std::endl;
+    std::cout << "                                        @             @ * @ @@         @@@         @@ @  @            @@                                                    " << std::endl;
+    std::cout << "                                       @         @@@@@@@@@@@                        @@@@@@@@@@          @@                                                  " << std::endl;
+    std::cout << "                                      @          @         @                        @        @           @@                                                 " << std::endl;
+    std::cout << "                                    @@@@@@@@@@@@@@         @    @@@@@@@@@@@@@@@@    @        @@@@@@@@@@@@@                                                  " << std::endl;
+    std::cout << "                                      @         @@ @@@     @    @             @@    @   @@@  @           @                                                  " << std::endl;
+    std::cout << "                                      @ - @@    @@         @    @             @@    @        @         @@@                                                  " << std::endl;
+    std::cout << "                                      @         @@         @    @             @@    @        @           @                                                  " << std::endl;
+    std::cout << "                                      @#        @@    @@   @    @             @@    @ @@@    @           @                                                  " << std::endl;
+    std::cout << "                                      @#    @@@ @@         @    @             @@    @        @ @@@       @                                                  " << std::endl;
+    std::cout << "                                      @#        @@         @    @             @@    @        @           @                                                  " << std::endl;
+    std::cout << "                                      @#        @@ @@@     @    @             @@    @    @@@ @           @                                                  " << std::endl;
+    std::cout << "                                      @         @@         @    @             @@    @        @           @                                                  " << std::endl;
+    std::cout << "                                      @ = @@@   @@         @    @             @@    @        @           @                                                  " << std::endl;
+    std::cout << "                                      @         @@         @    @             @@    @        @           @                                                  " << std::endl;
+    std::cout << "                                      @#        @@    @@   @    @             @@    @ @@@    @           @                                                  " << std::endl;
+    std::cout << "                                      @@        @@         @    @             @@    @        @           @                                                  " << std::endl;
+    std::cout << "                                        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                                    " << std::endl;
+    std::cout << "                                                                                                                                                            \033[0m" << std::endl;
 
 
-	//Main loop for the courtyard scenario
+    //Main loop for the courtyard scenario
     while (plotIndex >= 0 && plotIndex < this->story.size()) {
         std::cout << story[plotIndex].getPlot() << std::endl;
+        std::cout << "  " << std::endl;
         std::cout << story[plotIndex].getQuestion() << std::endl;
+        std::cout << "  " << std::endl;
 
         for (int i = 0; i < story[plotIndex].getChoices().size(); i++) {
-			std::cout << "[" << i << "]" << story[plotIndex].getChoices()[i].text << std::endl;  //Display the choices for the current narrative point
+            std::cout << "[" << i << "]" << story[plotIndex].getChoices()[i].text << std::endl;  //Display the choices for the current narrative point
         }
-        std::cin >> userInp;
-  
-		std::cout << "You chose: " << story[plotIndex].getChoices()[userInp].text << std::endl;  //Display the choice the user made
+
+        std::cout << "  " << std::endl;
+        std::cout << "\033[94mEnter your choice: \033[0m" << std::endl;
+        std::cout << "  " << std::endl;
+        userInp = safeInput(0, story[plotIndex].getChoices().size() - 1); //Get the user's choice and ensure it's within the valid range of choices for the current narrative point
+        std::cout << "  " << std::endl;
+        std::cout << "\033[93m===================================================\033[0m" << std::endl;
+        std::cout << "  " << std::endl;
+
+        std::cout << "You chose: " << story[plotIndex].getChoices()[userInp].text << std::endl;  //Display the choice the user made
+        std::cout << story[plotIndex].getChoices()[userInp].outcome << std::endl;
+        std::cout << "  " << std::endl;
+
+        std::cout << story[plotIndex].getChoices()[userInp].healthEffect << " health" << std::endl;
+        std::cout << story[plotIndex].getChoices()[userInp].skillEffect << " skill" << std::endl;
+        userHealth += story[plotIndex].getChoices()[userInp].healthEffect;
+        userSkill += story[plotIndex].getChoices()[userInp].skillEffect;
+
+
+        //When you gain the sword you gain 2 skills 
+        if (plotIndex == 0)
+        {
+            std::cout << "You have gained the sword! +2 skill" << std::endl;
+            userSkill += 2;
+            Weapon w = Weapon("Old Rusty Sword.", "An ancient looking sword which looks as though it dates back to antiquity times");
+            w.setEquipped(true);
+
+            std::cout << w.getName() << ": " << w.getDescription() << std::endl;
+        }
 
         plotIndex += 1;
-        std::cout << "=================================================== " << std::endl;
     }
 }

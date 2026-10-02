@@ -4,6 +4,7 @@
 #include <string>
 #include "NarrPoint.h"
 
+int safeInput(int min, int max);
 
 class Location
 {
